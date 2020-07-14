@@ -34,14 +34,7 @@
 
         <classes>
             <class name="com.aeione.ops.test.RegistrationPageTest"></class>
-            <class name="com.aeione.ops.test.NotificationTest"></class>
-            <class name="com.aeione.ops.test.WalletPageTest"></class>
-            <class name="com.aeione.ops.test.BookmarkPageTest"></class>
-            <class name="com.aeione.ops.test.InvitePageTest"></class>
-            <class name="com.aeione.ops.test.OrganizationPageTest"></class>
-            <class name="com.aeione.ops.test.SettingsPageTest"></class>
-            <class name="com.aeione.ops.test.CommunityPageTest"></class>
-
+            <class name="com.aeione.ops.test.LoginPageTest"></class>
         </classes>
     </test>
 
