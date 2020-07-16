@@ -24,7 +24,7 @@
                 <version>2.22.0</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>sanity-suite-cross-browser-test.xml</suiteXmlFile>
+                        <suiteXmlFile>tesng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
