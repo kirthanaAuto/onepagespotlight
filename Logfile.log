@@ -15177,3 +15177,4 @@
 2020-07-16 13:17:52,227 INFO  [GenericFunctions] I am in onTestStart method tc_LG_07_ResetPasswordWithInvalidMobileNumberTest start , I am in onTestStart class LoginPageTest start 
 2020-07-16 13:17:55,305 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_07_ResetPasswordWithInvalidMobileNumberTest succeed , I am in onTestSuccess class LoginPageTest succeed 
 2020-07-16 13:18:01,986 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-16 16:55:31,641 INFO  [GenericFunctions] I am in onStart method test-chrome 

@@ -94,9 +94,13 @@ public class GoogleSheetAPI {
                 .build();
         // Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize("user");
         // Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize("1pagespotlight.automation@gmail.com");
-        Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize(AUTHORIZE_URI);
+//        Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize(AUTHORIZE_URI);
+//        System.out.println("Credentials saved to " + DATA_STORE_DIR.getAbsolutePath());
+//        return credential;
+        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8889).build();
         System.out.println("Credentials saved to " + DATA_STORE_DIR.getAbsolutePath());
-        return credential;
+        return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
+
 
     }
 
