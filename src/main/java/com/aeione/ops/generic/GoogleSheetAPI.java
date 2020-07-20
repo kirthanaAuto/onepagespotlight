@@ -105,8 +105,8 @@ public class GoogleSheetAPI {
 //         receiver = new LocalServerReceiver.Builder().setCallbackPath("http://aeione.com:8090/Callback").setPort(8090).build();
 //        return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
 
-     // LocalServerReceiver receiver = new LocalServerReceiver.Builder().setHost("127.0.0.1").setPort(8090).build();
-      LocalServerReceiver receiver = new LocalServerReceiver.Builder().setHost("jenkins.opsplt.com").setPort(8090).build();
+      LocalServerReceiver receiver = new LocalServerReceiver.Builder().setHost("127.0.0.1").setPort(8090).build();
+     // LocalServerReceiver receiver = new LocalServerReceiver.Builder().setHost("jenkins.opsplt.com").setPort(8090).build();
 
         return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
     }
