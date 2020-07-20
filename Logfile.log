@@ -19184,3 +19184,5 @@
 2020-07-20 15:57:17,143 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
 2020-07-20 15:57:19,127 INFO  [GenericFunctions] I am in onTestStart method tc_RG_05_P1_SelectCountryCodeTest start , I am in onTestStart class RegistrationPageTest start 
 2020-07-20 16:10:18,973 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 16:21:23,911 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 16:21:52,243 INFO  [GenericFunctions] I am in onStart method test-chrome 
