@@ -1,5 +1,7 @@
 package com.aeione.ops.generic;
 
+import com.google.api.client.auth.oauth2.AuthorizationCodeRequestUrl;
+import com.google.api.client.auth.oauth2.AuthorizationCodeResponseUrl;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
 import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
@@ -17,6 +19,7 @@ import com.google.api.services.sheets.v4.model.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URLEncoder;
 import java.util.*;
 
 import static com.aeione.ops.generic.IAutoConst.AUTHORIZE_URI;
@@ -37,8 +40,13 @@ public class GoogleSheetAPI {
     /**
      * Directory to store user credentials for this application.
      */
+//    private static final java.io.File DATA_STORE_DIR = new java.io.File(
+//            System.getProperty("user.home"), ".credentials/sheets.googleapis.com-java-quickstart");
+
     private static final java.io.File DATA_STORE_DIR = new java.io.File(
-            System.getProperty("user.home"), ".credentials/sheets.googleapis.com-java-quickstart");
+            System.getProperty("user.dir"), "/user-credentials/sheets.googleapis.com-java-quickstart");
+
+
 
     /**
      * Global instance of the {@link FileDataStoreFactory}.
@@ -83,24 +91,36 @@ public class GoogleSheetAPI {
      */
     public static Credential authorize() throws IOException {
         // Load client secrets.
-        InputStream in = GoogleSheetAPI.class.getResourceAsStream("/client_secret_sheet.json");
+//        InputStream in = GoogleSheetAPI.class.getResourceAsStream("/client_secret_sheet.json");
+        InputStream in = GoogleSheetAPI.class.getResourceAsStream("/client_secret_samplesheet.json");
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
 
 
         // Build flow and trigger user authorization request.
         GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES)
                 .setDataStoreFactory(DATA_STORE_FACTORY)
-                .setAccessType("offline")
-                .build();
-        // Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize("user");
-        // Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize("1pagespotlight.automation@gmail.com");
-//        Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize(AUTHORIZE_URI);
-//        System.out.println("Credentials saved to " + DATA_STORE_DIR.getAbsolutePath());
-//        return credential;
-        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8889).build();
+                .setAccessType("online").setApprovalPrompt("auto").build();
         System.out.println("Credentials saved to " + DATA_STORE_DIR.getAbsolutePath());
+
+//         receiver = new LocalServerReceiver.Builder().setCallbackPath("http://aeione.com:8090/Callback").setPort(8090).build();
+//        return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
+
+
+        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setHost("127.0.0.1").setPort(8090).build();
+
         return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
 
+//
+
+
+//        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8889).build();
+//        System.out.println("Credentials saved to " + DATA_STORE_DIR.getAbsolutePath());
+//        return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
+
+
+
+
+//
 
     }
 
@@ -113,6 +133,7 @@ public class GoogleSheetAPI {
      */
     public static Sheets getSheetsService() throws IOException {
         Credential credential = authorize();
+
         return new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, credential)
                 .setApplicationName(APPLICATION_NAME)
                 .build();

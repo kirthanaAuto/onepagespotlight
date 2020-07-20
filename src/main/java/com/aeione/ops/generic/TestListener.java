@@ -29,20 +29,14 @@ import java.time.LocalTime;
 import java.util.*;
 
 import static com.aeione.ops.generic.FileHandling.createDirectoryByFolderName;
-import static java.nio.file.Files.createDirectory;
+
 
 public class TestListener extends TestSetUp implements ITestListener
 {
 	static Logger log = Logger.getLogger(GenericFunctions.class.getName());
-	String  currentLocalDateAndTime;
-	//ATUTestRecorder recorder;
-	String screenRecordTestPath;
-
 	String isTestPassed="";
     String overViewSheet=null;
     ArrayList<String> failedModules=null;
-
-
     ArrayList<String> totalSheets= null;
 	 
     private static String getTestMethodName(ITestResult iTestResult) {
@@ -183,7 +177,7 @@ public class TestListener extends TestSetUp implements ITestListener
         Reporter.log(screenPath);
 
 
-//       //   capturing browser console logs if failed
+       //   capturing browser console logs if failed
 //        LogEntries logEntries = DriverManager.getDriver().manage().logs().get(LogType.BROWSER);
 //		for (LogEntry entry : logEntries)
 //		{

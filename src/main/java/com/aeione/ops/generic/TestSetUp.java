@@ -241,8 +241,6 @@ public abstract class TestSetUp implements IAutoConst {
 
             if (shareReportToGoogleDrive == true) {
 
-                //Need to update
-             //  String currentDateReportFolder= dsriveapi.createSubFolder(AUTOMATION_REPORTS,String.valueOf(localDate));
 
                 GoogleDriveAPI.getUploadFileIntoGoogleDrive(renamedReport, AUTOMATION_REPORTS);
             }
@@ -268,28 +266,63 @@ public abstract class TestSetUp implements IAutoConst {
 
 
     public static String renameReport() {
-        LocalTime localTime = LocalTime.now();
-        File directoryPath = new File(ExtentManager.localDirectoryPath);
-        File currentFile = null;
         File newFile = null;
-        String renameFileDirPath = ExtentManager.localDirectoryPath + "/";
-        File[] listOfFiles = directoryPath.listFiles();
+        try {
+            LocalTime localTime = LocalTime.now();
+            File directoryPath = new File(ExtentManager.localDirectoryPath);
 
-        for (int i = 0; i <= listOfFiles.length - 1; i++) {
-            String currentFileName = renameFileDirPath + listOfFiles[i].getName().trim();
-            String expectedReportName = renameFileDirPath + ExtentManager.reportName + ".html".trim();
-            System.out.println(currentFileName);
-            System.out.println(expectedReportName);
+            String renameFileDirPath = ExtentManager.localDirectoryPath + "/";
+            File[] listOfFiles = directoryPath.listFiles();
 
-            if (currentFileName.equals(expectedReportName)) {
-                currentFile = listOfFiles[i];
-                newFile = new File(renameFileDirPath + "extentReport-" + OSName.toLowerCase() + "-" + broswerName.toLowerCase() + "[" + broswerversion + "]-" + localDate + "-" + localTime + ".html");
-                currentFile.renameTo(newFile);
-                break;
+            for (int i = 0; i <= listOfFiles.length - 1; i++) {
+                String currentFileName = renameFileDirPath + listOfFiles[i].getName().trim();
+                String expectedReportName = renameFileDirPath + ExtentManager.reportName + ".html".trim();
+                System.out.println(currentFileName);
+                System.out.println(expectedReportName);
+
+                if (currentFileName.equals(expectedReportName))
+                {
+                    File currentFile = listOfFiles[i];
+
+                    if(currentFile.exists()) {
+                        String a = OSName.toLowerCase();
+                        String b = broswerName.toLowerCase();
+                        String c = broswerversion;
+                        String d = String.valueOf(localDate);
+                        String e = String.valueOf(localTime);
+
+
+                        String newFileName = renameFileDirPath + "extentReport-" + a + "-" + b + "[" + c + "]-" + d + "-" + e + ".html";
+
+                        newFile = new File(newFileName);
+                        if(!newFile.exists()) {
+                            System.out.println(currentFile.getAbsolutePath());
+                            System.out.println(newFile.getAbsolutePath());
+
+                            if (currentFile.renameTo(newFile)) {
+                                System.out.println("File renamed");
+                            } else {
+                                System.out.println("File not renamed");
+                            }
+
+                        }
+
+                        break;
+                    }
+                }
             }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
         return newFile.getAbsolutePath();
     }
+
+
+
+
 
 
     /**
