@@ -8,3 +8,5 @@
 .DS_Store
 /.idea/
 /src/main/resources/ATUTestRecorder_2.1.jar
+/user-credentials/sheets.googleapis.com-java-quickstart/
+/user-credentials/drive.googleapis.com-java-quickstart/

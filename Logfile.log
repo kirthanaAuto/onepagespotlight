@@ -19169,3 +19169,7 @@
 2020-07-20 14:08:33,746 INFO  [GenericFunctions] I am in onTestFailure method tc_RG_01_P1_RegistrationAPITest failed, I am in onTestFailure class RegistrationPageTest failed 
 2020-07-20 14:08:39,521 INFO  [GenericFunctions] I am in onTestStart method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest start , I am in onTestStart class RegistrationPageTest start 
 2020-07-20 14:08:41,527 INFO  [GenericFunctions] I am in onTestFailure method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest failed, I am in onTestFailure class RegistrationPageTest failed 
+2020-07-20 15:05:07,316 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 15:06:10,229 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 15:07:27,780 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 15:24:15,213 INFO  [GenericFunctions] I am in onStart method test-chrome 
