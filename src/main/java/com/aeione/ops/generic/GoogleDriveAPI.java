@@ -23,8 +23,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static com.aeione.ops.generic.IAutoConst.AUTHORIZE_URI;
-
 public class GoogleDriveAPI {
 
     public static String userDir = null;
@@ -38,7 +36,7 @@ public class GoogleDriveAPI {
      * Directory to store user credentials for this application.
      */
     private static final java.io.File DATA_STORE_DIR =
-            new java.io.File(System.getProperty("user.dir"), "/user-credentials/drive.googleapis.com-java-quickstart");
+            new java.io.File(System.getProperty("user.home"), ".user-credentials/drive.googleapis.com-java-quickstart");
 
     /**
      * Global instance of the {@link FileDataStoreFactory}.
@@ -90,22 +88,22 @@ public class GoogleDriveAPI {
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(
                 JSON_FACTORY, new InputStreamReader(in));
 
-        // Build flow and trigger user authorization request.
-        GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
-                HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES).setDataStoreFactory(DATA_STORE_FACTORY).setAccessType("online").setApprovalPrompt("auto").build();
+        // Build authorizationFlow and trigger user authorization request.
+        GoogleAuthorizationCodeFlow authorizationFlow = new GoogleAuthorizationCodeFlow.Builder(
+                HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES).setDataStoreFactory(DATA_STORE_FACTORY).setAccessType("offline").build();
         System.out.println("Credentials saved to " + DATA_STORE_DIR.getAbsolutePath());
 
-        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setHost("127.0.0.1").setPort(8090).build();
-        return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
+        LocalServerReceiver receiver = new LocalServerReceiver.Builder().build();
+        return new AuthorizationCodeInstalledApp(authorizationFlow, receiver).authorize("user");
 
 
 //        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8090).build();
-//        return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
+//        return new AuthorizationCodeInstalledApp(authorizationFlow, receiver).authorize("user");
 
 //                .setAccessType("offline").build();
-//       // Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize("user");
-//      //  Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize("1pagespotlight.automation@gmail.com");
-//        Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize(AUTHORIZE_URI);
+//       // Credential credential = new AuthorizationCodeInstalledApp(authorizationFlow, new LocalServerReceiver()).authorize("user");
+//      //  Credential credential = new AuthorizationCodeInstalledApp(authorizationFlow, new LocalServerReceiver()).authorize("1pagespotlight.automation@gmail.com");
+//        Credential credential = new AuthorizationCodeInstalledApp(authorizationFlow, new LocalServerReceiver()).authorize(AUTHORIZE_URI);
 //        System.out.println("Credentials saved to " + DATA_STORE_DIR.getAbsolutePath());
 //        return credential;
     }

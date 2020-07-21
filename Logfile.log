@@ -19186,3 +19186,73 @@
 2020-07-20 16:10:18,973 INFO  [GenericFunctions] I am in onStart method test-chrome 
 2020-07-20 16:21:23,911 INFO  [GenericFunctions] I am in onStart method test-chrome 
 2020-07-20 16:21:52,243 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 17:05:06,906 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 17:31:00,360 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 17:34:38,347 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 17:52:15,501 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 17:53:49,745 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 18:32:09,216 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 18:35:30,700 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 18:39:33,035 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 18:44:06,022 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 19:04:20,844 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 19:12:29,102 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 21:45:58,497 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 21:47:34,247 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 21:59:30,653 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 22:01:04,771 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 22:17:07,260 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 22:21:33,023 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 22:22:52,625 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 22:27:53,940 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-20 22:29:47,595 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-21 08:24:02,538 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-21 15:43:18,675 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-21 15:43:41,746 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 15:43:50,967 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-21 15:43:58,970 INFO  [GenericFunctions] I am in onTestStart method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 15:44:00,793 INFO  [GenericFunctions] I am in onTestFailure method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest failed, I am in onTestFailure class RegistrationPageTest failed 
+2020-07-21 15:44:05,620 INFO  [GenericFunctions] I am in onTestStart method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 15:44:06,990 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-21 15:44:09,765 INFO  [GenericFunctions] I am in onTestStart method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 15:44:11,717 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-21 15:44:14,355 INFO  [GenericFunctions] I am in onTestStart method tc_RG_05_P1_SelectCountryCodeTest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 15:45:04,489 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-21 15:45:18,579 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 15:45:25,369 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-21 15:45:33,126 INFO  [GenericFunctions] I am in onTestStart method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 15:45:34,739 INFO  [GenericFunctions] I am in onTestFailure method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest failed, I am in onTestFailure class RegistrationPageTest failed 
+2020-07-21 15:45:39,523 INFO  [GenericFunctions] I am in onTestStart method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 15:45:40,931 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-21 15:45:43,539 INFO  [GenericFunctions] I am in onTestStart method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 15:45:45,481 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-21 15:45:48,208 INFO  [GenericFunctions] I am in onTestStart method tc_RG_05_P1_SelectCountryCodeTest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 15:48:57,124 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_05_P1_SelectCountryCodeTest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-21 15:49:13,611 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-21 15:49:13,959 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-21 15:49:21,613 INFO  [GenericFunctions] I am in onTestStart method tc_LG_02_P1_LoginViaValidUsernameAndPasswordTest start , I am in onTestStart class LoginPageTest start 
+2020-07-21 15:49:55,151 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_02_P1_LoginViaValidUsernameAndPasswordTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-21 15:50:00,552 INFO  [GenericFunctions] I am in onTestStart method tc_LG_03_LoginViaValidEmailAndPassword start , I am in onTestStart class LoginPageTest start 
+2020-07-21 15:50:24,156 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_03_LoginViaValidEmailAndPassword succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-21 15:50:30,223 INFO  [GenericFunctions] I am in onTestStart method tc_LG_04_LoginWithValidMobileNumberAndPasswordTest start , I am in onTestStart class LoginPageTest start 
+2020-07-21 15:50:53,601 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_04_LoginWithValidMobileNumberAndPasswordTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-21 15:50:59,915 INFO  [GenericFunctions] I am in onTestStart method tc_LG_07_ResetPasswordWithInvalidMobileNumberTest start , I am in onTestStart class LoginPageTest start 
+2020-07-21 15:51:03,213 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_07_ResetPasswordWithInvalidMobileNumberTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-21 15:51:20,861 INFO  [GenericFunctions] I am in onTestStart method TC_HM_01_P1_ContentsOfHomePageTest start , I am in onTestStart class HomePageTest start 
+2020-07-21 15:51:44,659 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_01_P1_ContentsOfHomePageTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-21 15:51:53,201 INFO  [GenericFunctions] I am in onTestStart method TC_HM_02_P1_ContentsOfProfileCardInHomePageTest start , I am in onTestStart class HomePageTest start 
+2020-07-21 15:52:17,719 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_02_P1_ContentsOfProfileCardInHomePageTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-21 15:52:24,325 INFO  [GenericFunctions] I am in onTestStart method TC_HM_03_P1_VerifyFollowedUserPostTest start , I am in onTestStart class HomePageTest start 
+2020-07-21 15:53:19,825 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_03_P1_VerifyFollowedUserPostTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-21 15:53:40,932 INFO  [GenericFunctions] I am in onTestStart method TC_HM_04_P1_VerifyPublishedBlogTest start , I am in onTestStart class HomePageTest start 
+2020-07-21 18:51:26,148 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-21 18:52:21,079 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-21 18:52:49,174 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 18:52:57,908 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-21 18:53:04,993 INFO  [GenericFunctions] I am in onTestStart method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 18:53:06,796 INFO  [GenericFunctions] I am in onTestFailure method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest failed, I am in onTestFailure class RegistrationPageTest failed 
+2020-07-21 18:53:10,863 INFO  [GenericFunctions] I am in onTestStart method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 18:53:12,262 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-21 18:53:15,559 INFO  [GenericFunctions] I am in onTestStart method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-21 18:53:17,506 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-21 18:53:19,824 INFO  [GenericFunctions] I am in onTestStart method tc_RG_05_P1_SelectCountryCodeTest start , I am in onTestStart class RegistrationPageTest start 
