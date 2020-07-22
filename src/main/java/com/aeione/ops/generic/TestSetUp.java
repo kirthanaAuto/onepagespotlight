@@ -100,7 +100,7 @@ public abstract class TestSetUp implements IAutoConst {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--no-sandbox");
-               // chromeOptions.addArguments("--headless");
+                chromeOptions.addArguments("--headless");
                 chromeOptions.addArguments("disable-gpu");
                 chromeOptions.addArguments("–disable-dev-shm-usage");
                 chromeOptions.setExperimentalOption("useAutomationExtension", false);
