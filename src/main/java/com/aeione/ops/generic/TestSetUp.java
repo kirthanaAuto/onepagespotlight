@@ -13,6 +13,7 @@ import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -97,6 +98,12 @@ public abstract class TestSetUp implements IAutoConst {
             case CHROME:
 
                 WebDriverManager.chromedriver().setup();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--no-sandbox");
+                chromeOptions.addArguments("--headless");
+                chromeOptions.addArguments("disable-gpu");
+                chromeOptions.addArguments("–disable-dev-shm-usage");
+                chromeOptions.setExperimentalOption("useAutomationExtension", false);
                 driver = new ChromeDriver();
                 DriverManager.setBrowserName(CHROME);
                 break;
