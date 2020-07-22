@@ -19,20 +19,20 @@
             <class name="com.aeione.ops.test.RegistrationPageTest"></class>
             <class name="com.aeione.ops.test.LoginPageTest"></class>
             <class name="com.aeione.ops.test.HomePageTest"></class>
-            <class name="com.aeione.ops.test.PostWIthHashTagTest"></class>
-            <class name="com.aeione.ops.test.PostCardTest"></class>
-            <class name="com.aeione.ops.test.ProfilePageTest"></class>
-            <class name="com.aeione.ops.test.ProfileCompletionPageTest"></class>
-            <class name="com.aeione.ops.test.NotificationTest"></class>
-            <class name="com.aeione.ops.test.WalletPageTest"></class>
-            <class name="com.aeione.ops.test.BookmarkPageTest"></class>
-            <class name="com.aeione.ops.test.InvitePageTest"></class>
-            <class name="com.aeione.ops.test.OrganizationPageTest"></class>
-            <class name="com.aeione.ops.test.SettingsPageTest"></class>
-            <class name="com.aeione.ops.test.CommunityPageTest"></class>
-            <class name="com.aeione.ops.test.ExplorePageTest"></class>
-            <class name="com.aeione.ops.test.BoostConsolePageTest"></class>
-            <class name="com.aeione.ops.test.EventPageTest"></class>
+<!--            <class name="com.aeione.ops.test.PostWIthHashTagTest"></class>-->
+<!--            <class name="com.aeione.ops.test.PostCardTest"></class>-->
+<!--            <class name="com.aeione.ops.test.ProfilePageTest"></class>-->
+<!--            <class name="com.aeione.ops.test.ProfileCompletionPageTest"></class>-->
+<!--            <class name="com.aeione.ops.test.NotificationTest"></class>-->
+<!--            <class name="com.aeione.ops.test.WalletPageTest"></class>-->
+<!--            <class name="com.aeione.ops.test.BookmarkPageTest"></class>-->
+<!--            <class name="com.aeione.ops.test.InvitePageTest"></class>-->
+<!--            <class name="com.aeione.ops.test.OrganizationPageTest"></class>-->
+<!--            <class name="com.aeione.ops.test.SettingsPageTest"></class>-->
+<!--            <class name="com.aeione.ops.test.CommunityPageTest"></class>-->
+<!--            <class name="com.aeione.ops.test.ExplorePageTest"></class>-->
+<!--            <class name="com.aeione.ops.test.BoostConsolePageTest"></class>-->
+<!--            <class name="com.aeione.ops.test.EventPageTest"></class>-->
 
         </classes>
     </test>
