@@ -19375,3 +19375,5 @@
 2020-07-22 17:26:51,819 INFO  [GenericFunctions] I am in onStart method test-firefox 
 2020-07-22 17:27:12,657 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
 2020-07-22 17:27:21,798 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-22 17:55:26,346 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-22 17:55:47,450 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 

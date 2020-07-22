@@ -9,7 +9,7 @@
         <listener class-name="com.aeione.ops.generic.TestListener"></listener>
     </listeners>
 
-    <test enabled="false" verbose="100" preserve-order="true" name="test-chrome">
+    <test enabled="true" verbose="100" preserve-order="true" name="test-chrome">
 
         <parameter name="testBrowserName" value="Chrome"></parameter>
         <parameter name="reportName" value="Chrome-ExtentReport"></parameter>
