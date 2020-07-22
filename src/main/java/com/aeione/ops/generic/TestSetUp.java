@@ -104,7 +104,7 @@ public abstract class TestSetUp implements IAutoConst {
                 chromeOptions.addArguments("disable-gpu");
                 chromeOptions.addArguments("–disable-dev-shm-usage");
                 chromeOptions.setExperimentalOption("useAutomationExtension", false);
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(chromeOptions);
                 DriverManager.setBrowserName(CHROME);
                 break;
 
