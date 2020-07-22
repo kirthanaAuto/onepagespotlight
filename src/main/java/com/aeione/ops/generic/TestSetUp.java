@@ -16,6 +16,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
@@ -91,7 +93,17 @@ public abstract class TestSetUp implements IAutoConst {
             case FIREFOX:
 
                 WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
+                FirefoxProfile firefoxProfile = new FirefoxProfile();
+                firefoxProfile.setPreference("browser.private.browsing.autostart",true);
+
+                FirefoxOptions options = new FirefoxOptions();
+                options.addArguments("--no-sandbox");
+                options.addArguments("--headless");
+                options.addArguments("-private");
+                options.addArguments("--window-size=1980,1080");
+                options.setProfile(firefoxProfile);
+               // options.addArguments("–disable-dev-shm-usage");
+                driver = new FirefoxDriver(options);
                 DriverManager.setBrowserName(FIREFOX);
                 break;
 
