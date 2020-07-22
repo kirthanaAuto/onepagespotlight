@@ -19371,3 +19371,7 @@
 2020-07-22 16:51:57,230 INFO  [GenericFunctions] I am in onTestStart method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest start , I am in onTestStart class RegistrationPageTest start 
 2020-07-22 16:52:01,748 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
 2020-07-22 16:52:04,983 INFO  [GenericFunctions] I am in onTestStart method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-22 17:25:34,675 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-22 17:26:51,819 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-22 17:27:12,657 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-22 17:27:21,798 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 

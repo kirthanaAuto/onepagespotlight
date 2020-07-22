@@ -1,14 +1,11 @@
 package com.aeione.ops.generic;
 
-import com.google.api.client.auth.oauth2.AuthorizationCodeRequestUrl;
-import com.google.api.client.auth.oauth2.AuthorizationCodeResponseUrl;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
 import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
 import com.google.api.client.googleapis.auth.oauth2.*;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.HttpTransport;
-import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.store.FileDataStoreFactory;
@@ -16,15 +13,10 @@ import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.SheetsScopes;
 import com.google.api.services.sheets.v4.model.*;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
-
-import static com.aeione.ops.generic.IAutoConst.AUTHORIZE_URI;
 
 /**
  * @author Kirthana SS
@@ -93,7 +85,7 @@ public class GoogleSheetAPI {
     public static Credential authorize() throws IOException {
         // Load client secrets.
 //        InputStream in = GoogleSheetAPI.class.getResourceAsStream("/client_secret_sheet.json");
-        InputStream in = GoogleSheetAPI.class.getResourceAsStream("/client_secret_samplesheet.json");
+        InputStream in = GoogleSheetAPI.class.getResourceAsStream("/client_secret_Sheet_new.json");
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
 
 

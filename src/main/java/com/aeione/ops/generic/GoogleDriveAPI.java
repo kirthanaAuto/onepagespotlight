@@ -84,7 +84,7 @@ public class GoogleDriveAPI {
 
 
         // Load client secrets.
-        InputStream in = GoogleDriveAPI.class.getResourceAsStream("/client_secret_drive-samplesheet.json");
+        InputStream in = GoogleDriveAPI.class.getResourceAsStream("/client_secret_Drive_new.json");
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(
                 JSON_FACTORY, new InputStreamReader(in));
 
