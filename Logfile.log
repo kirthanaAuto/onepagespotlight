@@ -1,0 +1,16 @@
+2020-07-23 17:04:51,292 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 17:05:05,813 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 17:05:06,789 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 17:05:16,997 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 17:05:16,998 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 17:05:30,508 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 17:05:30,914 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 17:05:40,401 INFO  [GenericFunctions] I am in onFinish method test-firefox 
+2020-07-23 17:11:41,332 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 17:12:01,573 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 17:12:02,284 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 17:12:11,147 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 17:12:11,149 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 17:12:23,926 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 17:12:24,317 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 17:12:33,842 INFO  [GenericFunctions] I am in onFinish method test-firefox 
