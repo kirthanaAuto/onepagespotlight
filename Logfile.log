@@ -19526,3 +19526,108 @@
 2020-07-23 14:12:47,221 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
 2020-07-23 14:12:47,629 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
 2020-07-23 14:13:07,266 INFO  [GenericFunctions] I am in onTestStart method TC_HM_01_P1_ContentsOfHomePageTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 14:45:24,704 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 14:45:53,305 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 14:46:02,094 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 14:48:39,804 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 14:48:53,744 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 14:49:05,699 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 14:49:28,956 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 14:49:29,400 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 14:49:48,997 INFO  [GenericFunctions] I am in onTestStart method TC_HM_01_P1_ContentsOfHomePageTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 14:50:12,837 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_01_P1_ContentsOfHomePageTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 14:50:20,692 INFO  [GenericFunctions] I am in onTestStart method TC_HM_02_P1_ContentsOfProfileCardInHomePageTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 14:50:44,344 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_02_P1_ContentsOfProfileCardInHomePageTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 14:50:48,986 INFO  [GenericFunctions] I am in onTestStart method TC_HM_03_P1_VerifyFollowedUserPostTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 14:52:12,650 INFO  [GenericFunctions] I am in onTestFailure method TC_HM_03_P1_VerifyFollowedUserPostTest failed, I am in onTestFailure class HomePageTest failed 
+2020-07-23 14:52:19,419 INFO  [GenericFunctions] I am in onTestStart method TC_HM_04_P1_VerifyPublishedBlogTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 14:53:44,036 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_04_P1_VerifyPublishedBlogTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 14:53:50,045 INFO  [GenericFunctions] I am in onTestStart method TC_HM_05_P1_ContentsOfSuggestedListTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 14:54:13,435 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_05_P1_ContentsOfSuggestedListTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 14:54:20,337 INFO  [GenericFunctions] I am in onTestStart method TC_HM_06_P1_VerifyFollowUserButtonTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 14:54:45,783 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_06_P1_VerifyFollowUserButtonTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 14:54:51,298 INFO  [GenericFunctions] I am in onTestStart method TC_HM_07_P1_VerifyCreatePostAreaTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 14:55:29,815 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_07_P1_VerifyCreatePostAreaTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 14:55:35,523 INFO  [GenericFunctions] I am in onTestStart method TC_HM_08_P1_VerifyOpportunityWidgetTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:00:30,371 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 15:00:46,451 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 15:00:56,003 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 15:01:17,018 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 15:01:17,397 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 15:01:35,830 INFO  [GenericFunctions] I am in onTestStart method TC_HM_01_P1_ContentsOfHomePageTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:02:03,820 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_01_P1_ContentsOfHomePageTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:02:12,317 INFO  [GenericFunctions] I am in onTestStart method TC_HM_02_P1_ContentsOfProfileCardInHomePageTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:02:35,856 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_02_P1_ContentsOfProfileCardInHomePageTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:02:40,924 INFO  [GenericFunctions] I am in onTestStart method TC_HM_03_P1_VerifyFollowedUserPostTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:03:35,480 INFO  [GenericFunctions] I am in onTestFailure method TC_HM_03_P1_VerifyFollowedUserPostTest failed, I am in onTestFailure class HomePageTest failed 
+2020-07-23 15:03:42,015 INFO  [GenericFunctions] I am in onTestStart method TC_HM_04_P1_VerifyPublishedBlogTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:05:03,755 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_04_P1_VerifyPublishedBlogTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:05:14,985 INFO  [GenericFunctions] I am in onTestStart method TC_HM_05_P1_ContentsOfSuggestedListTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:05:39,716 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_05_P1_ContentsOfSuggestedListTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:05:46,077 INFO  [GenericFunctions] I am in onTestStart method TC_HM_06_P1_VerifyFollowUserButtonTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:06:11,665 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_06_P1_VerifyFollowUserButtonTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:06:23,624 INFO  [GenericFunctions] I am in onTestStart method TC_HM_07_P1_VerifyCreatePostAreaTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:07:02,073 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_07_P1_VerifyCreatePostAreaTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:07:07,596 INFO  [GenericFunctions] I am in onTestStart method TC_HM_08_P1_VerifyOpportunityWidgetTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:07:41,832 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_08_P1_VerifyOpportunityWidgetTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:07:47,400 INFO  [GenericFunctions] I am in onTestStart method TC_HM_09_P1_VerifyMessangerPopUpTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:08:10,747 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_09_P1_VerifyMessangerPopUpTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:08:18,458 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 15:08:18,473 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 15:08:27,646 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 15:08:32,891 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 15:09:24,285 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 15:09:24,539 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 15:09:53,029 INFO  [GenericFunctions] I am in onTestStart method TC_HM_01_P1_ContentsOfHomePageTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:10:21,149 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_01_P1_ContentsOfHomePageTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:10:32,055 INFO  [GenericFunctions] I am in onTestStart method TC_HM_02_P1_ContentsOfProfileCardInHomePageTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:10:55,119 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_02_P1_ContentsOfProfileCardInHomePageTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:11:04,710 INFO  [GenericFunctions] I am in onTestStart method TC_HM_03_P1_VerifyFollowedUserPostTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:12:28,806 INFO  [GenericFunctions] I am in onTestFailure method TC_HM_03_P1_VerifyFollowedUserPostTest failed, I am in onTestFailure class HomePageTest failed 
+2020-07-23 15:12:38,375 INFO  [GenericFunctions] I am in onTestStart method TC_HM_04_P1_VerifyPublishedBlogTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:13:49,079 INFO  [GenericFunctions] I am in onTestFailure method TC_HM_04_P1_VerifyPublishedBlogTest failed, I am in onTestFailure class HomePageTest failed 
+2020-07-23 15:13:57,328 INFO  [GenericFunctions] I am in onTestStart method TC_HM_05_P1_ContentsOfSuggestedListTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:14:22,899 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_05_P1_ContentsOfSuggestedListTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:14:33,071 INFO  [GenericFunctions] I am in onTestStart method TC_HM_06_P1_VerifyFollowUserButtonTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:14:58,365 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_06_P1_VerifyFollowUserButtonTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:15:09,491 INFO  [GenericFunctions] I am in onTestStart method TC_HM_07_P1_VerifyCreatePostAreaTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:15:39,902 INFO  [GenericFunctions] I am in onTestFailure method TC_HM_07_P1_VerifyCreatePostAreaTest failed, I am in onTestFailure class HomePageTest failed 
+2020-07-23 15:16:02,481 INFO  [GenericFunctions] I am in onTestStart method TC_HM_08_P1_VerifyOpportunityWidgetTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:16:35,374 INFO  [GenericFunctions] I am in onTestFailure method TC_HM_08_P1_VerifyOpportunityWidgetTest failed, I am in onTestFailure class HomePageTest failed 
+2020-07-23 15:16:43,926 INFO  [GenericFunctions] I am in onTestStart method TC_HM_09_P1_VerifyMessangerPopUpTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:17:07,065 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_09_P1_VerifyMessangerPopUpTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:17:32,306 INFO  [GenericFunctions] I am in onFinish method test-firefox 
+2020-07-23 15:21:30,101 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 15:21:49,283 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 15:21:56,691 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 15:22:15,319 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 15:22:15,761 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 15:22:38,639 INFO  [GenericFunctions] I am in onTestStart method TC_HM_01_P1_ContentsOfHomePageTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:23:02,243 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_01_P1_ContentsOfHomePageTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:23:10,367 INFO  [GenericFunctions] I am in onTestStart method TC_HM_02_P1_ContentsOfProfileCardInHomePageTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:23:33,628 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_02_P1_ContentsOfProfileCardInHomePageTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:23:40,122 INFO  [GenericFunctions] I am in onTestStart method TC_HM_03_P1_VerifyFollowedUserPostTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:24:32,676 INFO  [GenericFunctions] I am in onTestFailure method TC_HM_03_P1_VerifyFollowedUserPostTest failed, I am in onTestFailure class HomePageTest failed 
+2020-07-23 15:24:39,351 INFO  [GenericFunctions] I am in onTestStart method TC_HM_04_P1_VerifyPublishedBlogTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:33:39,359 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 15:33:53,822 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 15:34:01,847 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 15:34:22,399 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 15:34:22,806 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 15:34:43,451 INFO  [GenericFunctions] I am in onTestStart method TC_HM_01_P1_ContentsOfHomePageTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:35:06,989 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_01_P1_ContentsOfHomePageTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:35:15,220 INFO  [GenericFunctions] I am in onTestStart method TC_HM_02_P1_ContentsOfProfileCardInHomePageTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:35:38,594 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_02_P1_ContentsOfProfileCardInHomePageTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:35:44,029 INFO  [GenericFunctions] I am in onTestStart method TC_HM_03_P1_VerifyFollowedUserPostTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:37:06,772 INFO  [GenericFunctions] I am in onTestFailure method TC_HM_03_P1_VerifyFollowedUserPostTest failed, I am in onTestFailure class HomePageTest failed 
+2020-07-23 15:37:13,579 INFO  [GenericFunctions] I am in onTestStart method TC_HM_04_P1_VerifyPublishedBlogTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:38:33,951 INFO  [GenericFunctions] I am in onTestSuccess method TC_HM_04_P1_VerifyPublishedBlogTest succeed , I am in onTestSuccess class HomePageTest succeed 
+2020-07-23 15:38:39,538 INFO  [GenericFunctions] I am in onTestStart method TC_HM_05_P1_ContentsOfSuggestedListTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:39:32,614 INFO  [GenericFunctions] I am in onTestFailure method TC_HM_05_P1_ContentsOfSuggestedListTest failed, I am in onTestFailure class HomePageTest failed 
+2020-07-23 15:39:40,338 INFO  [GenericFunctions] I am in onTestStart method TC_HM_06_P1_VerifyFollowUserButtonTest start , I am in onTestStart class HomePageTest start 
+2020-07-23 15:40:33,478 INFO  [GenericFunctions] I am in onTestFailure method TC_HM_06_P1_VerifyFollowUserButtonTest failed, I am in onTestFailure class HomePageTest failed 
+2020-07-23 15:42:00,105 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 15:42:14,345 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 15:42:22,962 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 15:42:41,409 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 15:42:41,916 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 

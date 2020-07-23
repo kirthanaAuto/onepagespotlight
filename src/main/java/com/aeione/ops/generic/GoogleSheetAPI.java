@@ -92,7 +92,7 @@ public class GoogleSheetAPI {
                 .setAccessType("offline").build();
         System.out.println("Credentials saved to " + DATA_STORE_DIR.getAbsolutePath());
 
-        LocalServerReceiver receiver = new LocalServerReceiver.Builder().build();
+        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8090).build();
         return new AuthorizationCodeInstalledApp(authorizationFlow, receiver).authorize("user");
 
 //        String authorizeUrl =
