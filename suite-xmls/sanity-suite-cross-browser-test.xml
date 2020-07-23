@@ -66,7 +66,7 @@
     </test>
 
 
-    <test enabled="true" verbose="100" preserve-order="true" name="test-safari">
+    <test enabled="false" verbose="100" preserve-order="true" name="test-safari">
 
         <parameter name="testBrowserName" value="Safari"></parameter>
         <parameter name="reportName" value="Safari-ExtentReport"></parameter>
