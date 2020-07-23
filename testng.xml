@@ -4,8 +4,11 @@
 
     <parameter name="shareReportToGoogleDrive" value="true"></parameter>
     <parameter name="isParallel" value="false"></parameter>
+    <parameter name="RunHeadless" value="true"></parameter>
+
 
     <listeners>
+        <listener class-name="com.aeione.ops.generic.AnnotationTransformerListener"></listener>
         <listener class-name="com.aeione.ops.generic.TestListener"></listener>
     </listeners>
 
@@ -18,7 +21,7 @@
         <classes>
             <class name="com.aeione.ops.test.RegistrationPageTest"></class>
             <class name="com.aeione.ops.test.LoginPageTest"></class>
-            <class name="com.aeione.ops.test.HomePageTest"></class>
+<!--            <class name="com.aeione.ops.test.HomePageTest"></class>-->
 <!--            <class name="com.aeione.ops.test.PostWIthHashTagTest"></class>-->
 <!--            <class name="com.aeione.ops.test.PostCardTest"></class>-->
 <!--            <class name="com.aeione.ops.test.ProfilePageTest"></class>-->
@@ -47,7 +50,7 @@
         <classes>
             <class name="com.aeione.ops.test.RegistrationPageTest"></class>
             <class name="com.aeione.ops.test.LoginPageTest"></class>
-            <class name="com.aeione.ops.test.HomePageTest"></class>
+<!--            <class name="com.aeione.ops.test.HomePageTest"></class>-->
 <!--            <class name="com.aeione.ops.test.PostWIthHashTagTest"></class>-->
 <!--            <class name="com.aeione.ops.test.PostCardTest"></class>-->
 <!--            <class name="com.aeione.ops.test.ProfilePageTest"></class>-->

@@ -34,8 +34,6 @@ public class GoogleSheetAPI {
     /**
      * Directory to store user credentials for this application.
      */
-//    private static final java.io.File DATA_STORE_DIR = new java.io.File(
-//            System.getProperty("user.home"), ".credentials/sheets.googleapis.com-java-quickstart");
 
     private static final java.io.File DATA_STORE_DIR = new java.io.File(
             System.getProperty("user.home"), ".user-credentials/sheets.googleapis.com-java-quickstart");
@@ -84,7 +82,6 @@ public class GoogleSheetAPI {
      */
     public static Credential authorize() throws IOException {
         // Load client secrets.
-//        InputStream in = GoogleSheetAPI.class.getResourceAsStream("/client_secret_sheet.json");
         InputStream in = GoogleSheetAPI.class.getResourceAsStream("/client_secret_Sheet_new.json");
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
 

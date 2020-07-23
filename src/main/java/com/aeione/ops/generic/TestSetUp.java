@@ -66,7 +66,7 @@ public abstract class TestSetUp implements IAutoConst {
     }
 
 
-    @Parameters({"reportName", "replaceExistingReport"})
+    @Parameters({"reportName", "replaceExistingReport", })
     @BeforeTest
     public static void beforeTest(String reportName, boolean replaceExistingReport) {
 
@@ -78,9 +78,9 @@ public abstract class TestSetUp implements IAutoConst {
     }
 
 
-    @Parameters("testBrowserName")
+    @Parameters({"testBrowserName", "RunHeadless"})
     @BeforeClass(alwaysRun = true)
-    public void launchApplication(String testBrowserName) throws Exception {
+    public void launchApplication(String testBrowserName, String RunHeadless) throws Exception {
         // start the proxy
         proxy = new BrowserMobProxyServer();
         proxy.start(0);
@@ -95,14 +95,13 @@ public abstract class TestSetUp implements IAutoConst {
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxProfile firefoxProfile = new FirefoxProfile();
                 firefoxProfile.setPreference("browser.private.browsing.autostart",true);
-
                 FirefoxOptions options = new FirefoxOptions();
                 options.addArguments("--no-sandbox");
-                options.addArguments("--headless");
+                if(Boolean.valueOf(RunHeadless)){
+                options.addArguments("--headless");}
                 options.addArguments("-private");
                 options.addArguments("--window-size=1980,1080");
                 options.setProfile(firefoxProfile);
-               // options.addArguments("–disable-dev-shm-usage");
                 driver = new FirefoxDriver(options);
                 DriverManager.setBrowserName(FIREFOX);
                 break;
@@ -112,7 +111,8 @@ public abstract class TestSetUp implements IAutoConst {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--no-sandbox");
-                chromeOptions.addArguments("--headless");
+                if(Boolean.valueOf(RunHeadless)){
+                chromeOptions.addArguments("--headless");}
                 chromeOptions.addArguments("disable-gpu");
                 chromeOptions.addArguments("–disable-dev-shm-usage");
                 chromeOptions.setExperimentalOption("useAutomationExtension", false);

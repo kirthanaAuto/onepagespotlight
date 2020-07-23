@@ -19377,3 +19377,132 @@
 2020-07-22 17:27:21,798 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
 2020-07-22 17:55:26,346 INFO  [GenericFunctions] I am in onStart method test-chrome 
 2020-07-22 17:55:47,450 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 10:34:01,578 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 10:42:48,020 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 10:42:50,089 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 10:42:50,091 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 10:42:50,770 INFO  [GenericFunctions] I am in onFinish method test-firefox 
+2020-07-23 10:44:39,618 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 10:44:59,528 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 10:45:08,266 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 10:45:24,034 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 10:45:24,038 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 10:45:54,315 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 10:45:58,819 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 10:46:09,075 INFO  [GenericFunctions] I am in onFinish method test-firefox 
+2020-07-23 10:47:34,124 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 10:48:24,278 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 10:48:31,395 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 10:48:40,682 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 10:48:40,686 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 10:48:51,200 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 10:48:55,985 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 10:49:06,011 INFO  [GenericFunctions] I am in onFinish method test-firefox 
+2020-07-23 10:50:25,311 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 10:50:26,868 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 10:50:26,870 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 10:50:28,056 INFO  [GenericFunctions] I am in onFinish method test-firefox 
+2020-07-23 10:51:39,064 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 10:52:12,448 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 10:52:20,906 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 10:52:28,456 INFO  [GenericFunctions] I am in onTestStart method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 10:52:30,178 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 10:52:35,559 INFO  [GenericFunctions] I am in onTestStart method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 10:52:38,088 INFO  [GenericFunctions] I am in onTestFailure method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest failed, I am in onTestFailure class RegistrationPageTest failed 
+2020-07-23 10:52:42,666 INFO  [GenericFunctions] I am in onTestStart method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 10:52:46,515 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 10:52:51,153 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 10:52:51,155 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 10:53:46,055 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 10:53:50,926 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 10:53:59,217 INFO  [GenericFunctions] I am in onTestStart method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 10:54:01,006 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 10:54:05,974 INFO  [GenericFunctions] I am in onTestStart method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 10:54:07,754 INFO  [GenericFunctions] I am in onTestFailure method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest failed, I am in onTestFailure class RegistrationPageTest failed 
+2020-07-23 10:54:11,551 INFO  [GenericFunctions] I am in onTestStart method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 10:54:13,995 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 10:54:18,668 INFO  [GenericFunctions] I am in onFinish method test-firefox 
+2020-07-23 11:00:37,222 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 11:01:12,218 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 11:01:21,183 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 11:01:29,601 INFO  [GenericFunctions] I am in onTestStart method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 11:01:31,850 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 11:01:40,880 INFO  [GenericFunctions] I am in onTestStart method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 11:01:55,250 INFO  [GenericFunctions] I am in onTestFailure method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest failed, I am in onTestFailure class RegistrationPageTest failed 
+2020-07-23 11:02:02,703 INFO  [GenericFunctions] I am in onTestStart method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 11:02:05,510 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 11:02:58,316 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 11:02:58,662 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 11:03:11,240 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 11:03:11,242 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 11:03:39,230 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 11:03:43,881 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 11:03:52,878 INFO  [GenericFunctions] I am in onTestStart method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 11:03:54,805 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_03_P1_RegistrationWithInvalidPasswordAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 11:04:00,924 INFO  [GenericFunctions] I am in onTestStart method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 11:04:02,995 INFO  [GenericFunctions] I am in onTestFailure method tc_RG_02_P1_RegistrationWithInvalidOTPAPITest failed, I am in onTestFailure class RegistrationPageTest failed 
+2020-07-23 11:04:07,754 INFO  [GenericFunctions] I am in onTestStart method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 11:04:10,264 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_04_P1_RegistrationOnDOBWithAgeLimitAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 11:04:55,513 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 11:04:55,819 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 11:05:07,481 INFO  [GenericFunctions] I am in onFinish method test-firefox 
+2020-07-23 13:16:06,850 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 13:16:23,325 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 13:16:32,238 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 13:16:55,675 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 13:16:56,171 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 13:17:11,122 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 13:17:11,126 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 13:17:27,345 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 13:17:31,950 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 13:17:54,261 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 13:17:54,668 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 13:18:05,430 INFO  [GenericFunctions] I am in onFinish method test-firefox 
+2020-07-23 13:21:49,775 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 13:22:09,974 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 13:22:17,536 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 13:22:38,351 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 13:22:38,766 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 13:22:56,608 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 13:22:56,609 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 13:23:12,646 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 13:23:17,166 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 13:23:37,278 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 13:23:37,601 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 13:23:48,755 INFO  [GenericFunctions] I am in onFinish method test-firefox 
+2020-07-23 13:31:38,760 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 13:31:57,795 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 13:32:15,678 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 13:32:50,246 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 13:32:50,663 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 13:33:00,643 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 13:33:00,644 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 13:33:12,767 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 13:33:18,329 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 13:33:38,888 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 13:33:39,208 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 13:33:50,479 INFO  [GenericFunctions] I am in onFinish method test-firefox 
+2020-07-23 13:36:18,805 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 13:36:36,545 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 13:36:44,969 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 13:37:04,703 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 13:37:05,198 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 13:37:19,078 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 13:37:19,081 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 13:37:30,475 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 13:37:35,276 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 13:37:56,178 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 13:37:56,619 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 13:38:07,614 INFO  [GenericFunctions] I am in onFinish method test-firefox 
+2020-07-23 13:42:41,161 INFO  [GenericFunctions] I am in onStart method test-chrome 
+2020-07-23 13:42:56,724 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 13:43:06,227 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 13:43:41,843 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 13:43:42,497 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 13:44:03,091 INFO  [GenericFunctions] I am in onFinish method test-chrome 
+2020-07-23 13:44:03,094 INFO  [GenericFunctions] I am in onStart method test-firefox 
+2020-07-23 13:44:51,504 INFO  [GenericFunctions] I am in onTestStart method tc_RG_01_P1_RegistrationAPITest start , I am in onTestStart class RegistrationPageTest start 
+2020-07-23 13:44:56,634 INFO  [GenericFunctions] I am in onTestSuccess method tc_RG_01_P1_RegistrationAPITest succeed , I am in onTestSuccess class RegistrationPageTest succeed 
+2020-07-23 13:45:19,677 INFO  [GenericFunctions] I am in onTestStart method tc_LG_01_P1_ContentsOfLoginPageTest start , I am in onTestStart class LoginPageTest start 
+2020-07-23 13:45:20,143 INFO  [GenericFunctions] I am in onTestSuccess method tc_LG_01_P1_ContentsOfLoginPageTest succeed , I am in onTestSuccess class LoginPageTest succeed 
+2020-07-23 13:45:31,208 INFO  [GenericFunctions] I am in onFinish method test-firefox 

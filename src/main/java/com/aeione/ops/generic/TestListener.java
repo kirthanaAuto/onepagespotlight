@@ -61,7 +61,6 @@ public class TestListener extends TestSetUp implements ITestListener
         createDirectoryByFolderName("reports");
         createDirectoryByFolderName("json-formatted-file");
         createDirectoryByFolderName("json-file");
-        createDirectoryByFolderName("user-credentials");
 
         failedModules =new ArrayList<String>();
         failedModules.clear();
