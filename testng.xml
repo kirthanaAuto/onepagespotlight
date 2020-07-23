@@ -6,7 +6,6 @@
     <parameter name="isParallel" value="false"></parameter>
     <parameter name="RunHeadless" value="true"></parameter>
 
-
     <listeners>
         <listener class-name="com.aeione.ops.generic.AnnotationTransformerListener"></listener>
         <listener class-name="com.aeione.ops.generic.TestListener"></listener>
@@ -36,7 +35,6 @@
 <!--            <class name="com.aeione.ops.test.ExplorePageTest"></class>-->
 <!--            <class name="com.aeione.ops.test.BoostConsolePageTest"></class>-->
 <!--            <class name="com.aeione.ops.test.EventPageTest"></class>-->
-
         </classes>
     </test>
 
