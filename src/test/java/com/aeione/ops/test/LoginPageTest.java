@@ -1,6 +1,7 @@
 package com.aeione.ops.test;
 
 
+import com.aeione.ops.generic.GoogleDriveAPI;
 import com.aeione.ops.generic.GoogleSheetAPI;
 import com.aeione.ops.generic.TestSetUp;
 import com.aeione.ops.pageactions.HomePageActions;
@@ -26,10 +27,18 @@ public class LoginPageTest extends TestSetUp
    public HomePageActions getHomePageActions() throws IOException {
       return new HomePageActions();
    }
-   public GoogleSheetAPI sheetAPI() throws IOException
 
+   public GoogleSheetAPI sheetAPI() throws IOException
    {
+    GoogleSheetAPI.getSheetsService();
       return new GoogleSheetAPI();
+   }
+
+   public GoogleDriveAPI dsriveAPI() throws IOException {
+
+      GoogleDriveAPI.getDriveService();
+      return new GoogleDriveAPI();
+
    }
 
 

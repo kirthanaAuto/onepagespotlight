@@ -22,15 +22,20 @@ public class BoostConsolePageTest extends TestSetUp {
         return new BoostConsoleActions();
     }
 
-
-
-    public GoogleSheetAPI sheetAPI() throws IOException {
+    public GoogleSheetAPI sheetAPI() throws IOException
+    {
+        GoogleSheetAPI.getSheetsService();
         return new GoogleSheetAPI();
     }
 
     public GoogleDriveAPI dsriveAPI() throws IOException {
+
+        GoogleDriveAPI.getDriveService();
         return new GoogleDriveAPI();
+
     }
+
+
 
     /**
      * Test_Cases_To_Verify the boost Console under profile drop down

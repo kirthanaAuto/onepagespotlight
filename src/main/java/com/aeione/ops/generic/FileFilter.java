@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FilenameFilter;
 
 public class FileFilter  implements FilenameFilter {
-    private String fileExtension;
+    private final String fileExtension;
 
     public FileFilter(String fileExtension) {
         this.fileExtension = fileExtension;

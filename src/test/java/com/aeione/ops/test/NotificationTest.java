@@ -1,5 +1,6 @@
 package com.aeione.ops.test;
 
+import com.aeione.ops.generic.GoogleDriveAPI;
 import com.aeione.ops.generic.GoogleSheetAPI;
 import com.aeione.ops.generic.TestSetUp;
 import com.aeione.ops.pageactions.LoginPageActions;
@@ -18,10 +19,18 @@ public class NotificationTest extends TestSetUp
     public NotificationActions getNotificationActions() throws IOException {
         return new NotificationActions();
     }
-    public GoogleSheetAPI sheetAPI() throws IOException
 
+    public GoogleSheetAPI sheetAPI() throws IOException
     {
+       GoogleSheetAPI.getSheetsService();
         return new GoogleSheetAPI();
+    }
+
+    public GoogleDriveAPI dsriveAPI() throws IOException {
+
+      GoogleDriveAPI.getDriveService();
+        return new GoogleDriveAPI();
+
     }
 
     @Test(priority = 92, enabled = true, alwaysRun = true, description = "Verify Notification icon functionality")

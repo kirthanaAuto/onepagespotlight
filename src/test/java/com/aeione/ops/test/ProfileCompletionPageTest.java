@@ -36,12 +36,17 @@ public class ProfileCompletionPageTest extends TestSetUp {
         return new ProfileCompletionPageActions();
     }
 
-    public GoogleSheetAPI sheetAPI() throws IOException {
+    public GoogleSheetAPI sheetAPI() throws IOException
+    {
+      GoogleSheetAPI.getSheetsService();
         return new GoogleSheetAPI();
     }
 
     public GoogleDriveAPI dsriveAPI() throws IOException {
+
+     GoogleDriveAPI.getDriveService();
         return new GoogleDriveAPI();
+
     }
 
     public RegistrationPageActions getRegistrationPage() throws IOException {
@@ -95,7 +100,7 @@ public class ProfileCompletionPageTest extends TestSetUp {
         getRegistrationPage().verifyRegisterApi("Verify Step", response);
 
         List<List<Object>> values1 = Arrays.asList(Arrays.asList(fullName,userName,emailAddress, countryCode,phoneNumber,dateOfBirth,createPassword,skipOtp));
-        sheetAPI().appendRowData(TEST_DATA_GOOGLESHEET,constantRow,  "USER_ENTERED", values1);
+        sheetAPI().appendRowData(TEST_DATA_GOOGLESHEET,CONSTANT_ROW,  "USER_ENTERED", values1);
 
         //Update values in sheet
         List<List<Object>> values2 = Arrays.asList(Arrays.asList(userName, createPassword, fullName));

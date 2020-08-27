@@ -348,7 +348,7 @@ public class GenericFunctions // implements IAutoConst//
 	 */
 	public void waitTillElementToBeVisibleByLocator( By locator)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,3);
+		WebDriverWait wait = new WebDriverWait(driver,1);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 

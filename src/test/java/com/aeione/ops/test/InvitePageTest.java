@@ -31,13 +31,19 @@ public class InvitePageTest extends TestSetUp {
     }
 
 
-    public GoogleSheetAPI sheetAPI() throws IOException {
+    public GoogleSheetAPI sheetAPI() throws IOException
+    {
+        GoogleSheetAPI.getSheetsService();
         return new GoogleSheetAPI();
     }
 
     public GoogleDriveAPI dsriveAPI() throws IOException {
+
+        GoogleDriveAPI.getDriveService();
         return new GoogleDriveAPI();
+
     }
+
     /**
      * Test_Caeses_For_Check that User gets an option for "Invite Friend"
      * Author:- Smita Sahoo

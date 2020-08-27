@@ -27,11 +27,17 @@ public class PostCardTest extends TestSetUp {
     public PostCardActions getPostCardActions() throws IOException {
         return new PostCardActions();
     }
-    public GoogleSheetAPI sheetAPI() throws IOException {
+    public GoogleSheetAPI sheetAPI() throws IOException
+    {
+       GoogleSheetAPI.getSheetsService();
         return new GoogleSheetAPI();
     }
+
     public GoogleDriveAPI dsriveAPI() throws IOException {
+
+       GoogleDriveAPI.getDriveService();
         return new GoogleDriveAPI();
+
     }
     public RegistrationPageActions getRegistrationPage() throws IOException {
         return new RegistrationPageActions();

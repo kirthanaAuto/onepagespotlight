@@ -2,23 +2,24 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" parallel="tests" configfailurepolicy="continue" thread-count="10" preserve-order="true">
 
-    <parameter name="shareReportToGoogleDrive" value="false"></parameter>
-    <parameter name="isParallel" value="true"></parameter>
+    <parameter name="shareReportToGoogleDrive" value="false"/>
+    <parameter name="isParallel" value="true"/>
 
     <listeners>
-        <listener class-name="com.aeione.ops.generic.TestListener"></listener>
+        <listener class-name="com.aeione.ops.generic.TestListener"/>
     </listeners>
 
 
-    <test enabled="true" verbose="100" preserve-order="true" thread-count="10" name="/Users/qualitrix/Documents/Reporting/src/test-chrome1">
+    <test enabled="true" verbose="100" preserve-order="true" thread-count="10"
+          name="/Users/qualitrix/Documents/Reporting/src/test-chrome1">
 
-        <parameter name="testBrowserName" value="Chrome"></parameter>
-        <parameter name="reportName" value="Chrome-ParallelTest-ExtentReport"></parameter>
-        <parameter name="replaceExistingReport" value="false"></parameter>
+        <parameter name="testBrowserName" value="Chrome"/>
+        <parameter name="reportName" value="Chrome-ParallelTest-ExtentReport"/>
+        <parameter name="replaceExistingReport" value="false"/>
 
 
         <classes>
-            <class name="com.aeione.ops.test.LoginPageTest"></class>
+            <class name="com.aeione.ops.test.LoginPageTest"/>
         </classes>
     </test>
 
@@ -26,36 +27,38 @@
     <test enabled="true" verbose="100" preserve-order="true" thread-count="10"
           name="/Users/qualitrix/Documents/Reporting/src/test-chrome2">
 
-        <parameter name="testBrowserName" value="Chrome"></parameter>
-        <parameter name="reportName" value="Chrome-ParallelTest-ExtentReport"></parameter>
-        <parameter name="replaceExistingReport" value="false"></parameter>
+        <parameter name="testBrowserName" value="Chrome"/>
+        <parameter name="reportName" value="Chrome-ParallelTest-ExtentReport"/>
+        <parameter name="replaceExistingReport" value="false"/>
 
         <classes>
-            <class name="com.aeione.ops.test.HomePageTest"></class>
+            <class name="com.aeione.ops.test.HomePageTest"/>
         </classes>
     </test>
 
 
-    <test enabled="false" verbose="2" preserve-order="true" thread-count="10" name="/Users/qualitrix/Documents/Reporting/src/test-firefox-1">
+    <test enabled="false" verbose="2" preserve-order="true" thread-count="10"
+          name="/Users/qualitrix/Documents/Reporting/src/test-firefox-1">
 
-        <parameter name="testBrowserName" value="Firefox"></parameter>
-        <parameter name="reportName" value="Firefox-ParallelTest-ExtentReport"></parameter>
-        <parameter name="replaceExistingReport" value="false"></parameter>
+        <parameter name="testBrowserName" value="Firefox"/>
+        <parameter name="reportName" value="Firefox-ParallelTest-ExtentReport"/>
+        <parameter name="replaceExistingReport" value="false"/>
 
         <classes>
-            <class name="com.aeione.ops.test.LoginPageTest"></class>
+            <class name="com.aeione.ops.test.LoginPageTest"/>
         </classes>
     </test>
 
 
-    <test enabled="false" verbose="2" preserve-order="true" thread-count="10" name="/Users/qualitrix/Documents/Reporting/src/test-firefox-2">
+    <test enabled="false" verbose="2" preserve-order="true" thread-count="10"
+          name="/Users/qualitrix/Documents/Reporting/src/test-firefox-2">
 
-        <parameter name="testBrowserName" value="Firefox"></parameter>
-        <parameter name="reportName" value="Firefox-ParallelTest-ExtentReport"></parameter>
-        <parameter name="replaceExistingReport" value="false"></parameter>
+        <parameter name="testBrowserName" value="Firefox"/>
+        <parameter name="reportName" value="Firefox-ParallelTest-ExtentReport"/>
+        <parameter name="replaceExistingReport" value="false"/>
 
         <classes>
-            <class name="com.aeione.ops.test.HomePageTest"></class>
+            <class name="com.aeione.ops.test.HomePageTest"/>
         </classes>
     </test>
 

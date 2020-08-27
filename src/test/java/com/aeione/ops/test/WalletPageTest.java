@@ -1,5 +1,6 @@
 package com.aeione.ops.test;
 
+import com.aeione.ops.generic.GoogleDriveAPI;
 import com.aeione.ops.generic.GoogleSheetAPI;
 import com.aeione.ops.generic.TestSetUp;
 import com.aeione.ops.pageactions.*;
@@ -30,10 +31,18 @@ public class WalletPageTest extends TestSetUp
     public WalletPageActions getWalletPageActions() throws IOException {
         return new WalletPageActions();
     }
-    public GoogleSheetAPI sheetAPI() throws IOException
 
+    public GoogleSheetAPI sheetAPI() throws IOException
     {
+        GoogleSheetAPI.getSheetsService();
         return new GoogleSheetAPI();
+    }
+
+    public GoogleDriveAPI dsriveAPI() throws IOException {
+
+        GoogleDriveAPI.getDriveService();
+        return new GoogleDriveAPI();
+
     }
 
     public HomePageActions getHomePageActions() throws IOException {

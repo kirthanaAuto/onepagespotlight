@@ -48,13 +48,17 @@ public class SettingsPageTest extends TestSetUp
         return new ProfilePageActions();
     }
 
-    public GoogleDriveAPI dsriveAPI() throws IOException
+    public GoogleSheetAPI sheetAPI() throws IOException
     {
-        return new GoogleDriveAPI();
+       GoogleSheetAPI.getSheetsService();
+        return new GoogleSheetAPI();
     }
 
-    public GoogleSheetAPI sheetAPI() throws IOException {
-        return new GoogleSheetAPI();
+    public GoogleDriveAPI dsriveAPI() throws IOException {
+
+      GoogleDriveAPI.getDriveService();
+        return new GoogleDriveAPI();
+
     }
 
     @Test(priority = 114, enabled = true, alwaysRun = true, description = "Verify Settings option")

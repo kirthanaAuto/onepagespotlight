@@ -60,6 +60,7 @@ public abstract class TestSetUp implements IAutoConst {
         localDate = LocalDate.now();
         try {
             runBatchFile(DRIVER_UPDATION_BATCHFILE, OSName);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -283,6 +284,7 @@ public abstract class TestSetUp implements IAutoConst {
         removeFilesByExtention(".jpg");
         removeFilesByExtention(".mp3");
         removeFilesByExtention(".mp4");
+        removeFilesByExtention(".png");
     }
 
 

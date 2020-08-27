@@ -53,14 +53,24 @@ public class TestListener extends TestSetUp implements ITestListener
     {
         return new GoogleSheetAPI();
     }
+
+    public GoogleDriveAPI driveAPI() throws IOException
+    {
+        return new GoogleDriveAPI();
+    }
+
     //Before starting all tests, below method runs.
     
 	@Override
     public void onStart(ITestContext iTestContext)
 	{
+	    try{
         createDirectoryByFolderName("reports");
         createDirectoryByFolderName("json-formatted-file");
         createDirectoryByFolderName("json-file");
+
+        GoogleSheetAPI.getSheetsService();
+        GoogleDriveAPI.getDriveService();
 
         failedModules =new ArrayList<String>();
         failedModules.clear();
@@ -69,13 +79,15 @@ public class TestListener extends TestSetUp implements ITestListener
     	log.info("I am in onStart method " + iTestContext.getName());
         iTestContext.setAttribute("WebDriver", driver );
 
-        try {
-            totalSheets = sheetAPI().getSheetsName(TEST_EXECUTION_SHEET);
+
+        totalSheets = sheetAPI().getSheetsName(TEST_EXECUTION_SHEET);
+
+
+        overViewSheet=totalSheets.get(0);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        overViewSheet=totalSheets.get(0);
         
     }
  
