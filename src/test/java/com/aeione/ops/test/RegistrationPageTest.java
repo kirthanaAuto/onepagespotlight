@@ -71,7 +71,7 @@ public class RegistrationPageTest  extends TestSetUp
 
         //Update created account in Registration sheet
         List<List<Object>> values = Arrays.asList(Arrays.asList(fullName,userName,emailAddress, countryCode,phoneNumber,dateOfBirth,createPassword,skipOtp));
-        sheetAPI().appendRowData(TEST_DATA_GOOGLESHEET,CONSTANT_ROW,  "USER_ENTERED", values);
+        sheetAPI().appendRowData(TEST_DATA_GOOGLESHEET, CONSTANT_ROW, "USER_ENTERED", values);
 
         //Update values in sheet
         List<List<Object>> SetEmailLoginvalues = Arrays.asList(Arrays.asList(emailAddress, createPassword, fullName));

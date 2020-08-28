@@ -327,7 +327,6 @@ public class BookmarkPageActions {
 
     }
     public void verifyDisplayOfPostedContent(String... strings) {
-
         try {
             genericfunctions.waitTillTheElementIsVisible(postcardobjects.posted_content.get(0));
             Assert.assertTrue(postcardobjects.posted_content.get(0).isDisplayed());
@@ -336,8 +335,6 @@ public class BookmarkPageActions {
         } catch (Exception e) {
             Assert.fail("Expected :: \" Posted Content\" should be displayed  ; Actual ::  \"Posted Content\" is not displayed" + "&" + e.getMessage() + "");
         }
-
-
     }
     public void verifyDisplayOfBookmarkLink(String... strings) {
 

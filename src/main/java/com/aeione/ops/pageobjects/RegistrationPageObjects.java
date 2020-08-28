@@ -8,62 +8,61 @@ import java.util.List;
 public class RegistrationPageObjects {
 
     @FindBy(id = "registration-fullname")
-    public WebElement registration_fullname_textfield;
+    public WebElement registrationFullNameTextField;
 
     @FindBy(id = "registration-username")
-    public WebElement registration_username_textfield;
+    public WebElement registrationUsernameTextField;
 
     @FindBy(id = "registration-email")
-    public WebElement registration_email_textfield;
+    public WebElement registrationEmailTextField;
 
     @FindBy(id = "phone")
-    public WebElement phone_textfield;
+    public WebElement phoneTextField;
 
-    @FindBy(xpath="//*[@class='selected-flag dropdown-toggle']")
-    public WebElement country_dropdown;
+    @FindBy(xpath = "//*[@class='selected-flag dropdown-toggle']")
+    public WebElement countryDropdown;
 
     @FindBy(id = "registration-date-dropdown")
-    public WebElement registration_date_dropdown;
+    public WebElement registrationDateDropdown;
 
     @FindBy(id = "registration-month-dropdown")
-    public WebElement registration_month_dropdown;
+    public WebElement registrationMonthDropdown;
 
     @FindBy(id = "registration-year-dropdown")
-    public WebElement registration_year_dropdown;
+    public WebElement registrationYearDropdown;
 
     @FindBy(id = "registration-password")
-    public WebElement registration_password_textfield;
+    public WebElement registrationPasswordTextField;
 
     @FindBy(id = "registration-confirm-password")
-    public WebElement registration_confirm_password_textfield;
+    public WebElement registrationConfirmPasswordTextField;
 
     @FindBy(id = "registration-checkbox")
-    public WebElement registration_checkbox;
+    public WebElement registrationCheckbox;
 
     @FindBy(id = "registration-submit")
-    public WebElement registration_submit_button;
+    public WebElement registrationSubmitButton;
 
     @FindBy(xpath = "//*[@class='country']")
-    public List<WebElement> country_option;
+    public List<WebElement> countryOption;
 
     @FindBy(xpath = "//*[@class='flag-box']")
-    public List<WebElement> country_flag_box_option;
+    public List<WebElement> countryFlagBoxOption;
 
     @FindBy(xpath = "//*[@class='country-name']")
-    public List<WebElement> country_name_option;
+    public List<WebElement> countryNameOption;
 
     @FindBy(xpath = "//*[@class='dial-code']")
-    public List<WebElement> dial_code_option;
+    public List<WebElement> dialCodeOption;
 
     @FindBy(xpath = "//*[contains(text(),'Confirmation failed')]")
-    public WebElement confirmation_failed_error_msg;
+    public WebElement confirmationFailedErrorMsg;
 
     @FindBy(xpath = "//*[contains(@id,'otp_')]")
-    public List<WebElement> otp_textfields;
-
+    public List<WebElement> otpTextFields;
 
     @FindBy(xpath = "//*[@class='selected-flag dropdown-toggle']/*[contains(@class,'iti-flag')]")
-    public WebElement selected_coutry;
+    public WebElement selectedCountry;
 
 
 }

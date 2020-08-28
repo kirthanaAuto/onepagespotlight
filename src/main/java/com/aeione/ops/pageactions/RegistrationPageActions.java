@@ -3,9 +3,7 @@ package com.aeione.ops.pageactions;
 import com.aeione.ops.generic.DriverManager;
 import com.aeione.ops.generic.ExtentTestManager;
 import com.aeione.ops.generic.GenericFunctions;
-
 import com.aeione.ops.pageobjects.RegistrationPageObjects;
-
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
@@ -13,19 +11,16 @@ import com.cedarsoftware.util.io.JsonWriter;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.relevantcodes.extentreports.LogStatus;
-
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
-import org.json.JSONWriter;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -347,8 +342,8 @@ public class RegistrationPageActions {
             String phoneNumber = strings[4];
             String otp = strings[5];
 
-            genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.registration_fullname_textfield);
-            registrationpageobjects.registration_fullname_textfield.sendKeys();
+            genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.registrationFullNameTextField);
+            registrationpageobjects.registrationFullNameTextField.sendKeys();
         } catch (Exception e) {
             Assert.fail("Could not perform action on \"Registration fullname textfield\"" + "&" + e.getMessage() + "");
 
@@ -359,8 +354,8 @@ public class RegistrationPageActions {
     public void enterPhoneNumber(String... strings) {
         try {
             ExtentTestManager.getTest().log(LogStatus.INFO, " " + strings[0] + " :: Enter valid phone number ");
-            genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.phone_textfield);
-            registrationpageobjects.phone_textfield.sendKeys(strings[1]);
+            genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.phoneTextField);
+            registrationpageobjects.phoneTextField.sendKeys(strings[1]);
         } catch (Exception e) {
             Assert.fail("Could not perform action on \"phone textfield\"" + "&" + e.getMessage() + "");
 
@@ -371,13 +366,13 @@ public class RegistrationPageActions {
     public void enterOTP(String... strings) {
         try {
             ExtentTestManager.getTest().log(LogStatus.INFO, " " + strings[0] + " :: Enter " + strings[1] + " ");
-            genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.otp_textfields.get(0));
+            genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.otpTextFields.get(0));
             String[] opt = strings[2].split("");
             for (int i = 0; i <= opt.length - 1; i++) {
-                registrationpageobjects.otp_textfields.get(i).sendKeys(opt[i]);
+                registrationpageobjects.otpTextFields.get(i).sendKeys(opt[i]);
             }
         } catch (Exception e) {
-            Assert.fail("Could not perform action on \"otp textfield\"" + "&" + e.getMessage() + "");
+            Assert.fail("Could not perform action on \"otp textField\"" + "&" + e.getMessage() + "");
         }
 
     }
@@ -386,8 +381,8 @@ public class RegistrationPageActions {
     public void clickOnCountryDropDown(String... strings) {
         try {
             ExtentTestManager.getTest().log(LogStatus.INFO, " " + strings[0] + " :: Click on Country Dropdown ");
-            genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.country_dropdown);
-            registrationpageobjects.country_dropdown.click();
+            genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.countryDropdown);
+            registrationpageobjects.countryDropdown.click();
         } catch (Exception e) {
             Assert.fail("Could not perform action on \"Country Dropdown\"" + "&" + e.getMessage() + "");
         }
@@ -398,7 +393,7 @@ public class RegistrationPageActions {
         String coutryId = null;
         try {
             ExtentTestManager.getTest().log(LogStatus.INFO, " " + strings[0] + " :: Select Country from dropdown  ");
-            List<WebElement> countries = registrationpageobjects.country_option;
+            List<WebElement> countries = registrationpageobjects.countryOption;
 
 
             Random r = new Random();
@@ -422,13 +417,13 @@ public class RegistrationPageActions {
         List<WebElement> countries = null;
         String countryName = null;
         try {
-            genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.country_dropdown);
+            genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.countryDropdown);
         } catch (Exception e) {
             Assert.fail("Could not find \"Country dropdown\"" + "&" + e.getMessage() + "");
         }
 
         try {
-            countries = registrationpageobjects.country_option;
+            countries = registrationpageobjects.countryOption;
         } catch (Exception e) {
             Assert.fail("Could not find \"Country option\"" + "&" + e.getMessage() + "");
         }
@@ -439,24 +434,24 @@ public class RegistrationPageActions {
             genericfunctions.scrollToElement(countries.get(i));
 
             try {
-                genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.country_flag_box_option.get(i));
-                Assert.assertTrue(registrationpageobjects.country_flag_box_option.get(i).isDisplayed());
+                genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.countryFlagBoxOption.get(i));
+                Assert.assertTrue(registrationpageobjects.countryFlagBoxOption.get(i).isDisplayed());
 
             } catch (Exception e) {
                 Assert.fail("Expected :: " + countryName + " country  flag should be displayed  ; Actual ::" + countryName + " country  flag is not displaying");
             }
 
             try {
-                genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.country_name_option.get(i));
-                Assert.assertTrue(registrationpageobjects.country_name_option.get(i).isDisplayed());
+                genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.countryNameOption.get(i));
+                Assert.assertTrue(registrationpageobjects.countryNameOption.get(i).isDisplayed());
 
             } catch (Exception e) {
                 Assert.fail("Expected :: " + countryName + " country name  should be displayed  ; Actual ::" + countryName + " country  name  is not displaying");
             }
 
             try {
-                genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.dial_code_option.get(i));
-                Assert.assertTrue(registrationpageobjects.dial_code_option.get(i).isDisplayed());
+                genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.dialCodeOption.get(i));
+                Assert.assertTrue(registrationpageobjects.dialCodeOption.get(i).isDisplayed());
 
             } catch (Exception e) {
                 Assert.fail("Expected :: " + countryName + " country dail code should be displayed  ; Actual ::" + countryName + " country  dail code is not displaying");
@@ -474,8 +469,8 @@ public class RegistrationPageActions {
         String actualCoutry = null;
 
         try {
-            genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.selected_coutry);
-            actualCoutry = registrationpageobjects.selected_coutry.getAttribute("class").trim();
+            genericfunctions.waitTillTheElementIsVisible(registrationpageobjects.selectedCountry);
+            actualCoutry = registrationpageobjects.selectedCountry.getAttribute("class").trim();
             Assert.assertTrue(actualCoutry.contains(expectedCoutry));
             ExtentTestManager.getTest().log(LogStatus.PASS, "Selected country flag is displaying  for \"" + expectedCoutry + "\"");
 

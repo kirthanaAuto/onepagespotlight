@@ -11,6 +11,7 @@ public class BookmarkPageObjects {
 
     @FindBy(id = "follow")
     public WebElement follow_button;
+
     @FindBy(xpath = "//div[text()=' Bookmarked ']")
     public WebElement bookmarked_tooltip;
 

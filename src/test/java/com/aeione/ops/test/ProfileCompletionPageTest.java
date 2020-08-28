@@ -100,7 +100,7 @@ public class ProfileCompletionPageTest extends TestSetUp {
         getRegistrationPage().verifyRegisterApi("Verify Step", response);
 
         List<List<Object>> values1 = Arrays.asList(Arrays.asList(fullName,userName,emailAddress, countryCode,phoneNumber,dateOfBirth,createPassword,skipOtp));
-        sheetAPI().appendRowData(TEST_DATA_GOOGLESHEET,CONSTANT_ROW,  "USER_ENTERED", values1);
+        sheetAPI().appendRowData(TEST_DATA_GOOGLESHEET, CONSTANT_ROW, "USER_ENTERED", values1);
 
         //Update values in sheet
         List<List<Object>> values2 = Arrays.asList(Arrays.asList(userName, createPassword, fullName));
@@ -119,7 +119,7 @@ public class ProfileCompletionPageTest extends TestSetUp {
         String fullname=loginvalues.get("FullName");
 
         getLoginPage().logIn("Action Step", fullname, "valid username, password", username, password);
-        getLoginPage().clickOnTopicSkipButton("Action Step");
+        getLoginPage().clickOnAddSkillsPopupCloseButton("Action Step");
         getHomePageActions().clickOnTopBarDropdown("Action Step");
         getProfilePageActions().clickOnViewProfileLink("Action Step");
         genericpageactions().attachFile("Action Step",imageFile);
@@ -423,7 +423,7 @@ public class ProfileCompletionPageTest extends TestSetUp {
         String searchUserName = val.get(0);
 
         getLoginPage().logIn("Action Step", fullname, "valid username, password", username, password);
-        getLoginPage().clickOnTopicSkipButton("Action Step");
+        getLoginPage().clickOnAddSkillsPopupCloseButton("Action Step");
         getSearchActions().enterUsernameOnSearchTextFieldAndSelectUserName("Action Step", searchUserName);
         getSearchActions().clickOnProfileTab("Action Step");
         //Update script
@@ -744,7 +744,7 @@ public class ProfileCompletionPageTest extends TestSetUp {
         String expecteddefaultProfilePercentage = ecditprofileval.get(27);
 
         getLoginPage().logIn("Action Step", fullname, "valid username, password", username, password);
-        getLoginPage().clickOnTopicSkipButton("Action Step");
+        getLoginPage().clickOnAddSkillsPopupCloseButton("Action Step");
         getHomePageActions().clickOnTopBarDropdown("Action Step");
         getProfilePageActions().clickOnViewProfileLink("Action Step");
         getProfileCompletionPageActions().clickOnEditIconOfAboutSection("Action Step");

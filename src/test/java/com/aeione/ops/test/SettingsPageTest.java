@@ -1,6 +1,5 @@
 package com.aeione.ops.test;
 
-import com.aeione.ops.generic.DriverManager;
 import com.aeione.ops.generic.GoogleDriveAPI;
 import com.aeione.ops.generic.GoogleSheetAPI;
 import com.aeione.ops.generic.TestSetUp;
@@ -323,8 +322,8 @@ public class SettingsPageTest extends TestSetUp
         password = val.get(1);
         fullName = val.get(2);
 
-        getLoginPage().logIn("Action Step",fullName,  "valid username, password",username, password);
-        getLoginPage().clickOnTopicSkipButton("Action Step");
+        getLoginPage().logIn("Action Step", fullName, "valid username, password", username, password);
+        getLoginPage().clickOnAddSkillsPopupCloseButton("Action Step");
 
         val = sheetAPI().getSpreadSheetValuesOfSpecificRow(TEST_DATA_GOOGLESHEET, TopBarDropDownRange);
         action = val.get(1);
