@@ -20,22 +20,22 @@
 
         <classes>
             <class name="com.aeione.ops.test.RegistrationPageTest"/>
-<!--            <class name="com.aeione.ops.test.LoginPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.HomePageTest"/>-->
-<!--            <class name="com.aeione.ops.test.PostWIthHashTagTest"/>-->
-<!--            <class name="com.aeione.ops.test.PostCardTest"/>-->
-<!--            <class name="com.aeione.ops.test.ProfilePageTest"/>-->
-<!--            <class name="com.aeione.ops.test.ProfileCompletionPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.NotificationTest"/>-->
-<!--            <class name="com.aeione.ops.test.WalletPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.BookmarkPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.InvitePageTest"/>-->
-<!--            <class name="com.aeione.ops.test.OrganizationPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.SettingsPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.CommunityPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.ExplorePageTest"/>-->
-<!--            <class name="com.aeione.ops.test.BoostConsolePageTest"/>-->
-<!--            <class name="com.aeione.ops.test.EventPageTest"/>-->
+            <class name="com.aeione.ops.test.LoginPageTest"/>
+            <class name="com.aeione.ops.test.HomePageTest"/>
+            <class name="com.aeione.ops.test.PostWIthHashTagTest"/>
+            <class name="com.aeione.ops.test.PostCardTest"/>
+            <class name="com.aeione.ops.test.ProfilePageTest"/>
+            <class name="com.aeione.ops.test.ProfileCompletionPageTest"/>
+            <class name="com.aeione.ops.test.NotificationTest"/>
+            <class name="com.aeione.ops.test.WalletPageTest"/>
+            <class name="com.aeione.ops.test.BookmarkPageTest"/>
+            <class name="com.aeione.ops.test.InvitePageTest"/>
+            <class name="com.aeione.ops.test.OrganizationPageTest"/>
+            <class name="com.aeione.ops.test.SettingsPageTest"/>
+            <class name="com.aeione.ops.test.CommunityPageTest"/>
+            <class name="com.aeione.ops.test.ExplorePageTest"/>
+            <class name="com.aeione.ops.test.BoostConsolePageTest"/>
+            <class name="com.aeione.ops.test.EventPageTest"/>
         </classes>
     </test>
 
@@ -48,22 +48,22 @@
 
         <classes>
             <class name="com.aeione.ops.test.RegistrationPageTest"/>
-<!--            <class name="com.aeione.ops.test.LoginPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.HomePageTest"/>-->
-<!--            <class name="com.aeione.ops.test.PostWIthHashTagTest"/>-->
-<!--            <class name="com.aeione.ops.test.PostCardTest"/>-->
-<!--            <class name="com.aeione.ops.test.ProfilePageTest"/>-->
-<!--            <class name="com.aeione.ops.test.ProfileCompletionPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.NotificationTest"/>-->
-<!--            <class name="com.aeione.ops.test.WalletPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.BookmarkPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.InvitePageTest"/>-->
-<!--            <class name="com.aeione.ops.test.OrganizationPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.SettingsPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.CommunityPageTest"/>-->
-<!--            <class name="com.aeione.ops.test.ExplorePageTest"/>-->
-<!--            <class name="com.aeione.ops.test.BoostConsolePageTest"/>-->
-<!--            <class name="com.aeione.ops.test.EventPageTest"/>-->
+            <class name="com.aeione.ops.test.LoginPageTest"/>
+            <class name="com.aeione.ops.test.HomePageTest"/>
+            <class name="com.aeione.ops.test.PostWIthHashTagTest"/>
+            <class name="com.aeione.ops.test.PostCardTest"/>
+            <class name="com.aeione.ops.test.ProfilePageTest"/>
+            <class name="com.aeione.ops.test.ProfileCompletionPageTest"/>
+            <class name="com.aeione.ops.test.NotificationTest"/>
+            <class name="com.aeione.ops.test.WalletPageTest"/>
+            <class name="com.aeione.ops.test.BookmarkPageTest"/>
+            <class name="com.aeione.ops.test.InvitePageTest"/>
+            <class name="com.aeione.ops.test.OrganizationPageTest"/>
+            <class name="com.aeione.ops.test.SettingsPageTest"/>
+            <class name="com.aeione.ops.test.CommunityPageTest"/>
+            <class name="com.aeione.ops.test.ExplorePageTest"/>
+            <class name="com.aeione.ops.test.BoostConsolePageTest"/>
+            <class name="com.aeione.ops.test.EventPageTest"/>
         </classes>
     </test>
 
