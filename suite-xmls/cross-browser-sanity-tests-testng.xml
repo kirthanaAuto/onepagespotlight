@@ -20,7 +20,7 @@
 
         <classes>
             <class name="com.aeione.ops.test.RegistrationPageTest"/>
-            <class name="com.aeione.ops.test.LoginPageTest"/>
+<!--            <class name="com.aeione.ops.test.LoginPageTest"/>-->
 <!--            <class name="com.aeione.ops.test.HomePageTest"/>-->
 <!--            <class name="com.aeione.ops.test.PostWIthHashTagTest"/>-->
 <!--            <class name="com.aeione.ops.test.PostCardTest"/>-->
@@ -48,7 +48,7 @@
 
         <classes>
             <class name="com.aeione.ops.test.RegistrationPageTest"/>
-            <class name="com.aeione.ops.test.LoginPageTest"/>
+<!--            <class name="com.aeione.ops.test.LoginPageTest"/>-->
 <!--            <class name="com.aeione.ops.test.HomePageTest"/>-->
 <!--            <class name="com.aeione.ops.test.PostWIthHashTagTest"/>-->
 <!--            <class name="com.aeione.ops.test.PostCardTest"/>-->
