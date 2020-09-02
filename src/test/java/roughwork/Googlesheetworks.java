@@ -20,7 +20,7 @@ public class Googlesheetworks extends TestSetUp
     {
 
         List<List<Object>> values = Arrays.asList(Arrays.asList("A", "123"), Arrays.asList("G", "jhbbj3"));
-        sheetAPI().appendRowData(TEST_DATA_GOOGLESHEET,constantRow,  "USER_ENTERED", values);
+        sheetAPI().appendRowData(TEST_DATA_GOOGLESHEET,CONSTANT_ROW,  "USER_ENTERED", values);
     }
 
     @Test(priority = 07, enabled = false, alwaysRun = true, description = "Verify delete row  from googlesheet")

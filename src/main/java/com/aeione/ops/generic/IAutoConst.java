@@ -42,34 +42,31 @@ public interface IAutoConst
 	String MIME_TYPE_GOOGLE_SHEET="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
 	String TEST_EXECUTION_SHEET="1SEKZORS-Xb-cnuKLGrdoxyA-0yXMV8s2zuxG6lZCab0";
 
-	String LOGIN_PAGE_TITLE="Login | One Page Spotlight";
+    String LOGIN_PAGE_TITLE = "Login | One Page Spotlight";
 
     //Google Test Drive  Constants
-	//String AUTHORIZE_URI="gandharva.kr@aeione.com";
-	String AUTHORIZE_URI="automation@aeione.com";
+    String AUTHORIZE_URI = "automation@aeione.com";
 
 
-	//Page Urls
-	String DISPOSABLE_EMAIL_ID_GENERATOR_URL="https://www.mailinator.com/";
+    //Page Urls
+    String DISPOSABLE_EMAIL_ID_GENERATOR_URL = "https://www.mailinator.com/";
 
-	//Application URLs
-	String HOMEURL="https://stg.doesntexist.com/newsfeed/subscribed";
-
-
-	//API URI:
-	String MOBILE_VERIFY_URI  = "https://stg.doesntexist.com/api/v3/verification/mobile/verify";
-	String MOBILE_CONFIRM_URI  = "https://stg.doesntexist.com/api/v3/verification/mobile/confirm";
-	String MOBILE_REGISTER_URI  = "https://stg.doesntexist.com/api/v1/register";
-
-	String constantRow= "Registration!A5:B5";
-
-   String Enabled="Enabled";
-   String Enabled_Specific_Test_Cases="Enabled Specific Test Cases";
-   String Disabled="Disabled";
-   String Disabled_Specific_Test_Cases="Disabled Specific Test Cases";
+    //Application URLs
+    String HOMEURL = "https://stg.doesntexist.com/newsfeed/subscribed";
 
 
+    //API URI:
+    String MOBILE_VERIFY_URI = "https://stg.doesntexist.com/api/v3/verification/mobile/verify";
+    String MOBILE_CONFIRM_URI = "https://stg.doesntexist.com/api/v3/verification/mobile/confirm";
+    String MOBILE_REGISTER_URI = "https://stg.doesntexist.com/api/v1/register";
 
+
+    String CONSTANT_ROW = "Registration!A5:B5";
+
+    String ENABLED = "Enabled";
+    String ENABLED_SPECIFIC_TEST_CASES = "Enabled Specific Test Cases";
+    String DISABLED = "Disabled";
+    String DISABLED_SPECIFIC_TEST_CASES = "Disabled Specific Test Cases";
 
 
 }

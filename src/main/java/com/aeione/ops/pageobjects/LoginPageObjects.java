@@ -64,10 +64,10 @@ public class LoginPageObjects
 	@FindBy(xpath = "//*[@class='line-err']")
 	public WebElement error_message;
 
-	@FindBy(id = "topics-skip")
-	public WebElement topics_skip_button;
+	@FindBy(id = "modal-close")
+	public WebElement addSkillsPopupCloseButton;
 
-	@FindBy(id="invalid-user")
+	@FindBy(id = "invalid-user")
 	public WebElement invalid_user_error_message;
 
 }

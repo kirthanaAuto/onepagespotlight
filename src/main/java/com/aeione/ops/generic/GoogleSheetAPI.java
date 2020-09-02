@@ -19,8 +19,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.*;
 
-import static com.aeione.ops.generic.IAutoConst.AUTHORIZE_URI;
-
 /**
  * @author Kirthana SS
  *
@@ -37,8 +35,12 @@ public class GoogleSheetAPI {
     /**
      * Directory to store user credentials for this application.
      */
+
     private static final java.io.File DATA_STORE_DIR = new java.io.File(
-            System.getProperty("user.home"), ".credentials/sheets.googleapis.com-java-quickstart");
+//            System.getProperty("user.home"), ".user-credentials/sheets.googleapis.com-java-quickstart");
+            System.getProperty("user.dir"), "user-credentials/sheets.googleapis.com-java-quickstart");
+
+
 
     /**
      * Global instance of the {@link FileDataStoreFactory}.
@@ -64,6 +66,8 @@ public class GoogleSheetAPI {
     private static final List<String> SCOPES = Collections.singletonList(SheetsScopes.DRIVE);
     //private static final List<String> SCOPES = Arrays.asList(SheetsScopes.DRIVE);
 
+    public static Sheets service;
+
     static {
         try {
             HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
@@ -71,6 +75,12 @@ public class GoogleSheetAPI {
         } catch (Throwable t) {
             t.printStackTrace();
             System.exit(1);
+        }
+
+        try {
+            service = getSheetsService();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -83,24 +93,17 @@ public class GoogleSheetAPI {
      */
     public static Credential authorize() throws IOException {
         // Load client secrets.
-        InputStream in = GoogleSheetAPI.class.getResourceAsStream("/client_secret_sheet.json");
+        InputStream in = GoogleSheetAPI.class.getResourceAsStream("/client_secret_Sheet.json");
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
 
-
         // Build flow and trigger user authorization request.
-        GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES)
+        GoogleAuthorizationCodeFlow authorizationFlow = new GoogleAuthorizationCodeFlow.Builder(HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES)
                 .setDataStoreFactory(DATA_STORE_FACTORY)
-                .setAccessType("offline")
-                .build();
-        // Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize("user");
-        // Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize("1pagespotlight.automation@gmail.com");
-//        Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize(AUTHORIZE_URI);
-//        System.out.println("Credentials saved to " + DATA_STORE_DIR.getAbsolutePath());
-//        return credential;
-        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8889).build();
+                .setAccessType("offline").setApprovalPrompt("force").build();
         System.out.println("Credentials saved to " + DATA_STORE_DIR.getAbsolutePath());
-        return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
 
+        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8090).build();
+        return new AuthorizationCodeInstalledApp(authorizationFlow, receiver).authorize("user");
 
     }
 
@@ -113,6 +116,7 @@ public class GoogleSheetAPI {
      */
     public static Sheets getSheetsService() throws IOException {
         Credential credential = authorize();
+
         return new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, credential)
                 .setApplicationName(APPLICATION_NAME)
                 .build();
@@ -120,7 +124,7 @@ public class GoogleSheetAPI {
 
 
     public List<List<Object>> getSpreadSheetRecords(String spreadsheetId, String range) throws Exception {
-        Sheets service = getSheetsService();
+        //Sheets service = getSheetsService();
         ValueRange response = service.spreadsheets().values()
                 .get(spreadsheetId, range)
                 .execute();
@@ -238,7 +242,7 @@ public class GoogleSheetAPI {
 
         String valueInputOption = "RAW";
         // Build a new authorized API client service.
-        Sheets service = getSheetsService();
+       // Sheets service = getSheetsService();
         // Prints the names and majors of students in a sample spreadsheet:
 
         List<List<Object>> arrData = getData();
@@ -271,7 +275,7 @@ public class GoogleSheetAPI {
 
     public UpdateValuesResponse updateMultipleCellValues(String spreadsheetId, String range, String valueInputOption, List<List<Object>> _values)
             throws IOException {
-        Sheets service = getSheetsService();
+      //  Sheets service = getSheetsService();
         // [START sheets_update_values]
         List<List<Object>> values = Arrays.asList(
                 Arrays.asList(
@@ -296,7 +300,7 @@ public class GoogleSheetAPI {
 
     public UpdateValuesResponse updateRowDataByColumnName(String spreadsheetId, String range, String valueInputOption, List<List<Object>> _values)
             throws IOException {
-        Sheets service = getSheetsService();
+      //  Sheets service = getSheetsService();
         // [START sheets_update_values]
         List<List<Object>> values = Arrays.asList(
                 Arrays.asList(
@@ -308,8 +312,7 @@ public class GoogleSheetAPI {
         values = _values;
         // [END_EXCLUDE]
 
-        ValueRange body = new ValueRange()
-                .setValues(values);
+        ValueRange body = new ValueRange().setValues(values);
         UpdateValuesResponse result =
                 service.spreadsheets().values().update(spreadsheetId, range, body)
                         .setValueInputOption(valueInputOption)
@@ -342,7 +345,7 @@ public class GoogleSheetAPI {
     public AppendValuesResponse appendRowData(String spreadsheetId, String range, String valueInputOption, List<List<Object>> _values)
             throws IOException
     {
-        Sheets service = getSheetsService();
+      //  Sheets service = getSheetsService();
         // [START sheets_append_values]
         List<List<Object>> values = Arrays.asList(
                 Arrays.asList(
@@ -377,7 +380,7 @@ public class GoogleSheetAPI {
     public void clearSpecificRowDataByColumnName(String spreadsheetId, String range)
             throws IOException
     {
-        Sheets service = getSheetsService();
+      //  Sheets service = getSheetsService();
         // The ID of the spreadsheet to update.
         //Assign values to desired fields of `requestBody`:
         ClearValuesRequest requestBody = new ClearValuesRequest();
@@ -401,7 +404,7 @@ public class GoogleSheetAPI {
             throws IOException
     {
         int returnValue=0;
-        Sheets service = getSheetsService();
+     //   Sheets service = getSheetsService();
         ValueRange response = service.spreadsheets().values()
                 .get(spreadsheetId, range)
                 .execute();
@@ -441,7 +444,7 @@ public class GoogleSheetAPI {
 
 
 
-        Sheets service = getSheetsService();
+      //  Sheets service = getSheetsService();
         ValueRange response = service.spreadsheets().values()
                 .get(spreadsheetId, range)
                 .execute();
@@ -465,7 +468,7 @@ public class GoogleSheetAPI {
 
     public BatchGetValuesResponse batchGetValues(String spreadsheetId, List<String> _ranges)
             throws IOException {
-        Sheets service = getSheetsService();
+      //  Sheets service = getSheetsService();
         // [START sheets_batch_get_values]
         List<String> ranges = Arrays.asList(
                 //Range names ...
@@ -555,7 +558,7 @@ public class GoogleSheetAPI {
     public  ArrayList<String> getSheetsName(String spreadsheetId) throws Exception {
 
         ArrayList<String> totalSheets=new ArrayList<String>();
-        Sheets service = getSheetsService();
+      //  Sheets service = getSheetsService();
         Spreadsheet response1= service.spreadsheets().get(spreadsheetId).setIncludeGridData (false).execute ();
 
         List<Sheet> workSheetList = response1.getSheets();
@@ -566,6 +569,31 @@ public class GoogleSheetAPI {
         }
 
         return totalSheets;
+    }
+
+
+    public List<List<Object>> getSpreadSheetRowValuesAndArrange(String TEST_DATA_GOOGLESHEET, String range) throws Exception {
+
+        List<List<Object>> updatedRowValues=new ArrayList<>();
+
+        //Get Row Values
+        List<List<Object>> rowvalues = getSpreadSheetRecords(TEST_DATA_GOOGLESHEET, range);
+        System.out.println(rowvalues);
+
+        //get number of columns
+        int header=rowvalues.get(0).size();
+        outerloop :
+        for (int j = 0; j <= rowvalues.size()-1; j++)
+        {
+           int rowsize=rowvalues.get(j).size();
+            // System.out.println(rowsize);
+           int a=header-rowsize;
+           for(int i=0; i<=a-1;i++)
+            {
+                 rowvalues.get(j).add("");
+            }
+        }
+        return rowvalues;
     }
 
 }

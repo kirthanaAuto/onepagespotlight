@@ -23,8 +23,13 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static com.aeione.ops.generic.IAutoConst.AUTHORIZE_URI;
-
+/**
+ * @author Kirthana SS
+ *
+ * To Handle Google Drive such as ::  Donloading, uploading files etc
+ *
+ *
+ */
 public class GoogleDriveAPI {
 
     public static String userDir = null;
@@ -37,7 +42,8 @@ public class GoogleDriveAPI {
     /**
      * Directory to store user credentials for this application.
      */
-    private static final java.io.File DATA_STORE_DIR = new java.io.File(System.getProperty("user.home"), ".credentials/drive.googleapis.com-java-quickstart");
+    private static final java.io.File DATA_STORE_DIR =
+            new java.io.File(System.getProperty("user.dir"), "user-credentials/drive.googleapis.com-java-quickstart");
 
     /**
      * Global instance of the {@link FileDataStoreFactory}.
@@ -55,6 +61,8 @@ public class GoogleDriveAPI {
      */
     private static HttpTransport HTTP_TRANSPORT;
 
+    public static Drive driveService;
+
     /**
      * Global instance of the scopes required by this quickstart.
      * <p>
@@ -68,6 +76,9 @@ public class GoogleDriveAPI {
         try {
             HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
             DATA_STORE_FACTORY = new FileDataStoreFactory(DATA_STORE_DIR);
+
+            driveService = getDriveService();
+
         } catch (Throwable t) {
             t.printStackTrace();
             System.exit(1);
@@ -85,18 +96,19 @@ public class GoogleDriveAPI {
 
 
         // Load client secrets.
-        InputStream in = GoogleDriveAPI.class.getResourceAsStream("/client_secret_drive.json");
+        InputStream in = GoogleDriveAPI.class.getResourceAsStream("/client_secret_Drive.json");
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(
                 JSON_FACTORY, new InputStreamReader(in));
 
-        // Build flow and trigger user authorization request.
-        GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
-                HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES).setDataStoreFactory(DATA_STORE_FACTORY).setAccessType("offline").build();
-       // Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize("user");
-      //  Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize("1pagespotlight.automation@gmail.com");
-        Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize(AUTHORIZE_URI);
+        // Build authorizationFlow and trigger user authorization request.
+        GoogleAuthorizationCodeFlow authorizationFlow = new GoogleAuthorizationCodeFlow.Builder(
+                HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES).setDataStoreFactory(DATA_STORE_FACTORY)
+                .setAccessType("offline").setApprovalPrompt("force").build();
         System.out.println("Credentials saved to " + DATA_STORE_DIR.getAbsolutePath());
-        return credential;
+
+        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8090).build();
+        return new AuthorizationCodeInstalledApp(authorizationFlow, receiver).authorize("user");
+
     }
 
 
@@ -113,9 +125,9 @@ public class GoogleDriveAPI {
     }
 
     public void getDownloadGoogleDriveFileWithFileID(String inputFileID) throws IOException, GeneralSecurityException {
-        Drive service = getDriveService();
+        //Drive service = getDriveService();
         // Print the names and IDs for up to 10 files.
-        FileList result = getDriveService().files().list().setPageSize(1000).setFields("nextPageToken, files(id, name)").execute();
+        FileList result = driveService.files().list().setPageSize(1000).setFields("nextPageToken, files(id, name)").execute();
         List<File> files = result.getFiles();
 
 
@@ -130,7 +142,7 @@ public class GoogleDriveAPI {
                 System.out.printf("%s (%s)\n", file.getName(), file.getId());
 
                 try {
-                    Drive.Files f = service.files();
+                    Drive.Files f = driveService.files();
                     HttpResponse httpResponse = null;
                     String fileid = file.getId();
                     if (fileid.equals(inputFileID)) {
@@ -162,7 +174,7 @@ public class GoogleDriveAPI {
 
     public static void getUploadFileIntoGoogleDrive(String uploadingFilePath, String googleDriveFolderId) {
         try {
-            Drive service = getDriveService();
+            //Drive service = getDriveService();
             final java.io.File UPLOAD_FILE = new java.io.File(uploadingFilePath);
 
             File fileMetadata = new File();
@@ -171,15 +183,7 @@ public class GoogleDriveAPI {
             FileContent mediaContent = new FileContent("text/html", UPLOAD_FILE);
 
 
-            Drive.Files.Create create = service.files().create(fileMetadata, mediaContent);
-//            MediaHttpUploader uploader = create.getMediaHttpUploader();
-//            //choose your chunk size and it will be automatically divided parts
-//            uploader.setChunkSize(MediaHttpUploader.MINIMUM_CHUNK_SIZE);
-//            //As per Google, this enables gzip in future (optional) // got from another post
-//            uploader.setDisableGZipContent(false);
-//            //true enables direct upload, false resume-able upload
-//            uploader.setDirectUploadEnabled(true);
-//            uploader.setProgressListener();
+            Drive.Files.Create create = driveService.files().create(fileMetadata, mediaContent);
             File file = create.execute();
             System.out.println("File ID: " + file.getId());
             // return file.getId();
@@ -200,17 +204,17 @@ public class GoogleDriveAPI {
     {
         try {
 
-            Drive service = getDriveService();
+           // Drive service = getDriveService();
 
-            File file = service.files().get(fileId).execute();
+            File file = driveService.files().get(fileId).execute();
             System.out.println("Title: " + file.getName());
             System.out.println("Description: " + file.getDescription());
             System.out.println("MIME type: " + file.getMimeType());
             String MIMIE_Type = file.getMimeType();
             String FileName = file.getName();
             OutputStream outputStream = new FileOutputStream(new java.io.File(userDir + "//" + FileName));
-            // service.files().export(fileId, MIMIE_Type).executeMediaAndDownloadTo(outputStream);
-            service.files().get(fileId).executeMediaAndDownloadTo(outputStream);
+
+            driveService.files().get(fileId).executeMediaAndDownloadTo(outputStream);
             System.out.println(outputStream);
         } catch (IOException e) {
             System.out.println("An error occurred: " + e);
@@ -224,7 +228,7 @@ public class GoogleDriveAPI {
         System.out.println("Sub Folder Name: "+subFolderName);
         File file = null;
         try {
-            Drive service = getDriveService();
+           // Drive service = getDriveService();
             File fileMetadata = new File();
             fileMetadata.setName(subFolderName);
             fileMetadata.setMimeType("application/vnd.google-apps.folder");
@@ -232,7 +236,7 @@ public class GoogleDriveAPI {
                 List<String> parents = Arrays.asList(parentFolderId);
                 fileMetadata.setParents(parents);
             }
-            file = service.files().create(fileMetadata).setFields("id, name").execute();
+            file = driveService.files().create(fileMetadata).setFields("id, name").execute();
             System.out.println("Folder ID: " + file.getId());
             return file.getId();
         } catch (IOException e)

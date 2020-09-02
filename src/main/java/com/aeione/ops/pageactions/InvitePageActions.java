@@ -64,13 +64,13 @@ public class InvitePageActions {
     }
 
     public void enterEmailIdOnEmailAddressTextArea(String... strings) {
-        String email_id = strings[1];
+        String emailId = strings[1];
         try {
 
             ExtentTestManager.getTest().log(LogStatus.INFO, " " + strings[0] + " :: Enter email address on  Text Area");
             genericfunctions.waitTillTheElementIsVisible(invitepageobjects.email_address_textarea);
 
-            invitepageobjects.email_address_textarea.sendKeys(email_id);
+            invitepageobjects.email_address_textarea.sendKeys(emailId);
             actions.sendKeys(Keys.ENTER).build().perform();
         } catch (Exception e) {
             Assert.fail("Could not perform action on \"email address Text Area\"" + "&" + e.getMessage() + "");
@@ -96,10 +96,10 @@ public class InvitePageActions {
 
         ExtentTestManager.getTest().log(LogStatus.INFO, " " + strings[0] + " :: Login to gmail "+userCredentials+"");
 
-        String email_id = strings[2].trim();
+        String emailId = strings[2].trim();
         String password = strings[3].trim();
 
-        enterEmailid(email_id);
+        enterEmailid(emailId);
         clickOnEmaiIdNext();
         enterEmailPassword(password);
         clickOnPasswordNext();
@@ -135,11 +135,11 @@ public class InvitePageActions {
     public void enterEmailPassword(String... strings) {
         ExtentTestManager.getTest().log(LogStatus.INFO, " " + strings[0] + " :: click and enter email password");
         try {
-            String email_password = strings[0];
+            String emailPassword = strings[0];
 
             genericfunctions.waitTillTheElementIsVisible(invitepageobjects.gmail_password);
 
-            invitepageobjects.gmail_password.sendKeys(email_password);
+            invitepageobjects.gmail_password.sendKeys(emailPassword);
         } catch (Exception e) {
             Assert.fail("Could not perform action on \"Email password\"" + "&" + e.getMessage() + "");
 

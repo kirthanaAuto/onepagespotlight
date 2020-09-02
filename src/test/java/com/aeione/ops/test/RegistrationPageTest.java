@@ -1,5 +1,6 @@
 package com.aeione.ops.test;
 
+import com.aeione.ops.generic.GoogleDriveAPI;
 import com.aeione.ops.generic.GoogleSheetAPI;
 import com.aeione.ops.generic.TestSetUp;
 import com.aeione.ops.pageactions.RegistrationPageActions;
@@ -26,7 +27,15 @@ public class RegistrationPageTest  extends TestSetUp
 
     public GoogleSheetAPI sheetAPI() throws IOException
     {
+       GoogleSheetAPI.getSheetsService();
         return new GoogleSheetAPI();
+    }
+
+    public GoogleDriveAPI dsriveAPI() throws IOException {
+
+      GoogleDriveAPI.getDriveService();
+        return new GoogleDriveAPI();
+
     }
 
 
@@ -62,7 +71,7 @@ public class RegistrationPageTest  extends TestSetUp
 
         //Update created account in Registration sheet
         List<List<Object>> values = Arrays.asList(Arrays.asList(fullName,userName,emailAddress, countryCode,phoneNumber,dateOfBirth,createPassword,skipOtp));
-        sheetAPI().appendRowData(TEST_DATA_GOOGLESHEET,constantRow,  "USER_ENTERED", values);
+        sheetAPI().appendRowData(TEST_DATA_GOOGLESHEET, CONSTANT_ROW, "USER_ENTERED", values);
 
         //Update values in sheet
         List<List<Object>> SetEmailLoginvalues = Arrays.asList(Arrays.asList(emailAddress, createPassword, fullName));

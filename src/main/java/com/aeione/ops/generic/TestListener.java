@@ -29,20 +29,14 @@ import java.time.LocalTime;
 import java.util.*;
 
 import static com.aeione.ops.generic.FileHandling.createDirectoryByFolderName;
-import static java.nio.file.Files.createDirectory;
+
 
 public class TestListener extends TestSetUp implements ITestListener
 {
 	static Logger log = Logger.getLogger(GenericFunctions.class.getName());
-	String  currentLocalDateAndTime;
-	//ATUTestRecorder recorder;
-	String screenRecordTestPath;
-
 	String isTestPassed="";
     String overViewSheet=null;
     ArrayList<String> failedModules=null;
-
-
     ArrayList<String> totalSheets= null;
 	 
     private static String getTestMethodName(ITestResult iTestResult) {
@@ -59,14 +53,24 @@ public class TestListener extends TestSetUp implements ITestListener
     {
         return new GoogleSheetAPI();
     }
+
+    public GoogleDriveAPI driveAPI() throws IOException
+    {
+        return new GoogleDriveAPI();
+    }
+
     //Before starting all tests, below method runs.
     
 	@Override
     public void onStart(ITestContext iTestContext)
 	{
+	    try{
         createDirectoryByFolderName("reports");
         createDirectoryByFolderName("json-formatted-file");
         createDirectoryByFolderName("json-file");
+
+        GoogleSheetAPI.getSheetsService();
+        GoogleDriveAPI.getDriveService();
 
         failedModules =new ArrayList<String>();
         failedModules.clear();
@@ -75,13 +79,15 @@ public class TestListener extends TestSetUp implements ITestListener
     	log.info("I am in onStart method " + iTestContext.getName());
         iTestContext.setAttribute("WebDriver", driver );
 
-        try {
-            totalSheets = sheetAPI().getSheetsName(TEST_EXECUTION_SHEET);
+
+        totalSheets = sheetAPI().getSheetsName(TEST_EXECUTION_SHEET);
+
+
+        overViewSheet=totalSheets.get(0);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        overViewSheet=totalSheets.get(0);
         
     }
  
@@ -183,7 +189,7 @@ public class TestListener extends TestSetUp implements ITestListener
         Reporter.log(screenPath);
 
 
-//       //   capturing browser console logs if failed
+       //   capturing browser console logs if failed
 //        LogEntries logEntries = DriverManager.getDriver().manage().logs().get(LogType.BROWSER);
 //		for (LogEntry entry : logEntries)
 //		{

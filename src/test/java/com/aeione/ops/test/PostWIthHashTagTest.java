@@ -46,11 +46,15 @@ public class PostWIthHashTagTest extends TestSetUp {
 
     public GoogleSheetAPI sheetAPI() throws IOException
     {
+       GoogleSheetAPI.getSheetsService();
         return new GoogleSheetAPI();
     }
 
     public GoogleDriveAPI dsriveAPI() throws IOException {
+
+       GoogleDriveAPI.getDriveService();
         return new GoogleDriveAPI();
+
     }
 
     /**
@@ -343,8 +347,8 @@ public class PostWIthHashTagTest extends TestSetUp {
         password = value.get("Password");
         fullName = value.get("FullName");
 
-        getLoginPage().logIn("Action Step",fullName,  "valid username, password",username, password);
-        getLoginPage().clickOnTopicSkipButton("Action Step");
+        getLoginPage().logIn("Action Step", fullName, "valid username, password", username, password);
+        getLoginPage().clickOnAddSkillsPopupCloseButton("Action Step");
 
         value = sheetAPI().getSpreadSheetRowValueByColumnName(TEST_DATA_GOOGLESHEET, PostwithHashTagRange);
         textPostVal= value.get("Post_Text_Message");

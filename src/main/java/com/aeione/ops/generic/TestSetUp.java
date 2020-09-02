@@ -13,8 +13,11 @@ import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
@@ -57,13 +60,14 @@ public abstract class TestSetUp implements IAutoConst {
         localDate = LocalDate.now();
         try {
             runBatchFile(DRIVER_UPDATION_BATCHFILE, OSName);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
 
-    @Parameters({"reportName", "replaceExistingReport"})
+    @Parameters({"reportName", "replaceExistingReport", })
     @BeforeTest
     public static void beforeTest(String reportName, boolean replaceExistingReport) {
 
@@ -75,9 +79,9 @@ public abstract class TestSetUp implements IAutoConst {
     }
 
 
-    @Parameters("testBrowserName")
+    @Parameters({"testBrowserName", "RunHeadless"})
     @BeforeClass(alwaysRun = true)
-    public void launchApplication(String testBrowserName) throws Exception {
+    public void launchApplication(String testBrowserName, String RunHeadless) throws Exception {
         // start the proxy
         proxy = new BrowserMobProxyServer();
         proxy.start(0);
@@ -90,14 +94,32 @@ public abstract class TestSetUp implements IAutoConst {
             case FIREFOX:
 
                 WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
+                FirefoxProfile firefoxProfile = new FirefoxProfile();
+                firefoxProfile.setPreference("browser.private.browsing.autostart",true);
+                FirefoxOptions options = new FirefoxOptions();
+                options.addArguments("--no-sandbox");
+                if(Boolean.valueOf(RunHeadless)){
+                options.addArguments("--headless");}
+                options.addArguments("-private");
+                options.addArguments("--window-size=1980,1080");
+                options.setProfile(firefoxProfile);
+                driver = new FirefoxDriver(options);
                 DriverManager.setBrowserName(FIREFOX);
                 break;
 
             case CHROME:
 
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--no-sandbox");
+                if(Boolean.valueOf(RunHeadless)){
+                chromeOptions.addArguments("--headless");}
+                chromeOptions.addArguments("disable-gpu");
+                chromeOptions.addArguments("–disable-dev-shm-usage");
+                chromeOptions.setExperimentalOption("useAutomationExtension", false);
+                chromeOptions.addArguments("--incognito");
+                chromeOptions.addArguments("--window-size=1980,1080");
+                driver = new ChromeDriver(chromeOptions);
                 DriverManager.setBrowserName(CHROME);
                 break;
 
@@ -241,8 +263,6 @@ public abstract class TestSetUp implements IAutoConst {
 
             if (shareReportToGoogleDrive == true) {
 
-                //Need to update
-             //  String currentDateReportFolder= dsriveapi.createSubFolder(AUTOMATION_REPORTS,String.valueOf(localDate));
 
                 GoogleDriveAPI.getUploadFileIntoGoogleDrive(renamedReport, AUTOMATION_REPORTS);
             }
@@ -264,32 +284,68 @@ public abstract class TestSetUp implements IAutoConst {
         removeFilesByExtention(".jpg");
         removeFilesByExtention(".mp3");
         removeFilesByExtention(".mp4");
+        removeFilesByExtention(".png");
     }
 
 
     public static String renameReport() {
-        LocalTime localTime = LocalTime.now();
-        File directoryPath = new File(ExtentManager.localDirectoryPath);
-        File currentFile = null;
         File newFile = null;
-        String renameFileDirPath = ExtentManager.localDirectoryPath + "/";
-        File[] listOfFiles = directoryPath.listFiles();
+        try {
+            LocalTime localTime = LocalTime.now();
+            File directoryPath = new File(ExtentManager.localDirectoryPath);
 
-        for (int i = 0; i <= listOfFiles.length - 1; i++) {
-            String currentFileName = renameFileDirPath + listOfFiles[i].getName().trim();
-            String expectedReportName = renameFileDirPath + ExtentManager.reportName + ".html".trim();
-            System.out.println(currentFileName);
-            System.out.println(expectedReportName);
+            String renameFileDirPath = ExtentManager.localDirectoryPath + "/";
+            File[] listOfFiles = directoryPath.listFiles();
 
-            if (currentFileName.equals(expectedReportName)) {
-                currentFile = listOfFiles[i];
-                newFile = new File(renameFileDirPath + "extentReport-" + OSName.toLowerCase() + "-" + broswerName.toLowerCase() + "[" + broswerversion + "]-" + localDate + "-" + localTime + ".html");
-                currentFile.renameTo(newFile);
-                break;
+            for (int i = 0; i <= listOfFiles.length - 1; i++) {
+                String currentFileName = renameFileDirPath + listOfFiles[i].getName().trim();
+                String expectedReportName = renameFileDirPath + ExtentManager.reportName + ".html".trim();
+                System.out.println(currentFileName);
+                System.out.println(expectedReportName);
+
+                if (currentFileName.equals(expectedReportName))
+                {
+                    File currentFile = listOfFiles[i];
+
+                    if(currentFile.exists()) {
+                        String a = OSName.toLowerCase();
+                        String b = broswerName.toLowerCase();
+                        String c = broswerversion;
+                        String d = String.valueOf(localDate);
+                        String e = String.valueOf(localTime);
+
+
+                        String newFileName = renameFileDirPath + "extentReport-" + a + "-" + b + "[" + c + "]-" + d + "-" + e + ".html";
+
+                        newFile = new File(newFileName);
+                        if(!newFile.exists()) {
+                            System.out.println(currentFile.getAbsolutePath());
+                            System.out.println(newFile.getAbsolutePath());
+
+                            if (currentFile.renameTo(newFile)) {
+                                System.out.println("File renamed");
+                            } else {
+                                System.out.println("File not renamed");
+                            }
+
+                        }
+
+                        break;
+                    }
+                }
             }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
         return newFile.getAbsolutePath();
     }
+
+
+
+
 
 
     /**

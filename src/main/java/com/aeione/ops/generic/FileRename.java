@@ -1,32 +1,33 @@
 package com.aeione.ops.generic;
-import java.io.File;
-import java.io.FileFilter;
-import java.io.IOException;
-import java.util.Arrays;
+
 import org.apache.commons.io.comparator.LastModifiedFileComparator;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
+
+import java.io.File;
+import java.io.FileFilter;
+import java.util.Arrays;
+
 public class FileRename {
 
 
-		 public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 
-			 
-			 String home = System.getProperty("user.home");
-			 File file = new File(home+"/Downloads/" ); 
-			 String filepath=file.toString();
-			 
-			  FileRename fr= new FileRename();
-			  File newfile = fr.getTheNewestFile(filepath, "csv");
-			  newfile.renameTo(new File(filepath +"\\i.csv"));
-			  String filename= newfile.getName();
-			 
-			  System.out.println("latest file is="+filename);
-			  
-			  FileRename fr1= new FileRename();
-			  File updated = fr1.getTheNewestFile(filepath,"csv");
-			  System.out.println("Changed file name is ="+updated);
-			  
-			    }
+
+		String home = System.getProperty("user.home");
+		File file = new File(home + "/Downloads/");
+		String filepath = file.toString();
+
+		FileRename fr = new FileRename();
+		File newfile = fr.getTheNewestFile(filepath, "csv");
+		if (newfile.renameTo(new File(filepath + "\\i.csv"))) {
+			String filename = newfile.getName();
+		}
+
+		FileRename fr1 = new FileRename();
+		File updated = fr1.getTheNewestFile(filepath, "csv");
+
+
+	}
 			 
 			 public File getTheNewestFile(String filePath, String ext) {
 			     File theNewestFile = null;

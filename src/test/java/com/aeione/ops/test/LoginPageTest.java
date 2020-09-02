@@ -1,24 +1,23 @@
 package com.aeione.ops.test;
 
 
+import com.aeione.ops.generic.GoogleDriveAPI;
 import com.aeione.ops.generic.GoogleSheetAPI;
 import com.aeione.ops.generic.TestSetUp;
 import com.aeione.ops.pageactions.HomePageActions;
 import com.aeione.ops.pageactions.LoginPageActions;
 import org.testng.annotations.Test;
+
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Map;
 
 
 /**
  * @author Kirthana SS
- *
+ * <p>
  * Tests on Login functionalities
  */
-public class LoginPageTest extends TestSetUp
-{
-
+public class LoginPageTest extends TestSetUp {
    public LoginPageActions getLoginPage() throws IOException {
       return new LoginPageActions();
    }
@@ -26,31 +25,34 @@ public class LoginPageTest extends TestSetUp
    public HomePageActions getHomePageActions() throws IOException {
       return new HomePageActions();
    }
-   public GoogleSheetAPI sheetAPI() throws IOException
 
-   {
+   public GoogleSheetAPI sheetAPI() throws IOException {
+      GoogleSheetAPI.getSheetsService();
       return new GoogleSheetAPI();
    }
 
+   public GoogleDriveAPI dsriveAPI() throws IOException {
+      GoogleDriveAPI.getDriveService();
+      return new GoogleDriveAPI();
+   }
 
-   @Test(priority = 06, enabled = true, alwaysRun = true, description = "Verify all the contents under the login page")
-   public void tc_LG_01_P1_ContentsOfLoginPageTest() throws Exception
-   {
+
+   @Test(priority = 6, enabled = true, alwaysRun = true, description = "Verify all the contents under the login page")
+   public void tc_LG_01_P1_ContentsOfLoginPageTest() throws Exception {
       getLoginPage().verifyContentsOfLoginPage("Verify Step");
    }
 
 
-   @Test(priority = 07, enabled = true, alwaysRun = true, description = "Verify if user will be able to login with a valid registered Username with valid password")
-   public void tc_LG_02_P1_LoginViaValidUsernameAndPasswordTest() throws Exception
-   {
-      String  loginRange = "Login!A4:C4";
+   @Test(priority = 7, enabled = true, alwaysRun = true, description = "Verify if user will be able to login with a valid registered Username with valid password")
+   public void tc_LG_02_P1_LoginViaValidUsernameAndPasswordTest() throws Exception {
+      String loginRange = "Login!A4:C4";
       Map<String, String> loginvalues = sheetAPI().getSpreadSheetRowValueByColumnName(TEST_DATA_GOOGLESHEET, loginRange);
-      String username=loginvalues.get("UserName / Email / PhoneNumber");
+      String username = loginvalues.get("UserName / Email / PhoneNumber");
       String password=loginvalues.get("Password");
       String fullname=loginvalues.get("FullName");
 
-      getLoginPage().logIn("Action Step" ,fullname , "valid registered Username & password",username, password);
-      getLoginPage().clickOnTopicSkipButton("Action Step");
+      getLoginPage().logIn("Action Step", fullname, "valid registered Username & password", username, password);
+      getLoginPage().clickOnAddSkillsPopupCloseButton("Action Step");
       getHomePageActions().verifyDisplayOfHomeTopbar("Verify Step");
       getHomePageActions().clickOnTopBarDropdown("Action Step");
       getHomePageActions().clickOnSignOut("Action Step");

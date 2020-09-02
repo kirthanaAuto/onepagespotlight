@@ -1,10 +1,12 @@
 package com.aeione.ops.test;
+
 import com.aeione.ops.generic.GoogleDriveAPI;
 import com.aeione.ops.generic.GoogleSheetAPI;
 import com.aeione.ops.generic.TestSetUp;
 import com.aeione.ops.pageactions.*;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,11 +32,18 @@ public class BookmarkPageTest extends TestSetUp {
     public SearchActions getSearchActions() throws IOException {
         return new SearchActions();
     }
-    public GoogleSheetAPI sheetAPI() throws Exception {
+
+    public GoogleSheetAPI sheetAPI() throws IOException
+    {
+        GoogleSheetAPI.getSheetsService();
         return new GoogleSheetAPI();
     }
+
     public GoogleDriveAPI dsriveAPI() throws IOException {
+
+        GoogleDriveAPI.getDriveService();
         return new GoogleDriveAPI();
+
     }
 
     /**
@@ -163,7 +172,7 @@ public class BookmarkPageTest extends TestSetUp {
         val2 = sheetAPI().getSpreadSheetRowValueByColumnName(TEST_DATA_GOOGLESHEET, range1);
         String PostVal = val2.get("Post_Text");
         getLoginPage().logIn("Action Step", fullName, "valid username, password", username_B, password_B);
-        getLoginPage().clickOnTopicSkipButton("Action Step");
+        getLoginPage().clickOnAddSkillsPopupCloseButton("Action Step");
         getSearchActions().enterUsernameOnSearchTextFieldAndSelectUserName("Action Step", username_to_search);
         getBookmarkPageActions().clickOnFollowButton("Action Step");
         getHomePageActions().clickOnHomeTopBar("Action Step");
@@ -295,7 +304,7 @@ public class BookmarkPageTest extends TestSetUp {
         val2 = sheetAPI().getSpreadSheetRowValueByColumnName(TEST_DATA_GOOGLESHEET, range1);
         String PostVal = val2.get("Post_Text");
         getLoginPage().logIn("Action Step", fullName, "valid username, password", username_B, password_B);
-        getLoginPage().clickOnTopicSkipButton("Action Step");
+        getLoginPage().clickOnAddSkillsPopupCloseButton("Action Step");
         getSearchActions().enterUsernameOnSearchTextFieldAndSelectUserName("Action Step", username_to_search);
         getBookmarkPageActions().clickOnFollowButton("Action Step");
         getHomePageActions().clickOnHomeTopBar("Action Step");

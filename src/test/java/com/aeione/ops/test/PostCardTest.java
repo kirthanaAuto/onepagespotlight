@@ -7,11 +7,10 @@ import com.aeione.ops.pageactions.HomePageActions;
 import com.aeione.ops.pageactions.LoginPageActions;
 import com.aeione.ops.pageactions.PostCardActions;
 import com.aeione.ops.pageactions.RegistrationPageActions;
-import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,11 +26,17 @@ public class PostCardTest extends TestSetUp {
     public PostCardActions getPostCardActions() throws IOException {
         return new PostCardActions();
     }
-    public GoogleSheetAPI sheetAPI() throws IOException {
+    public GoogleSheetAPI sheetAPI() throws IOException
+    {
+       GoogleSheetAPI.getSheetsService();
         return new GoogleSheetAPI();
     }
+
     public GoogleDriveAPI dsriveAPI() throws IOException {
+
+       GoogleDriveAPI.getDriveService();
         return new GoogleDriveAPI();
+
     }
     public RegistrationPageActions getRegistrationPage() throws IOException {
         return new RegistrationPageActions();
@@ -367,7 +372,7 @@ public class PostCardTest extends TestSetUp {
         String impressiontextVal = val.get("Impressions");
 
         getLoginPage().logIn("Action Step", fullName, "valid username, password", username, password);
-        getLoginPage().clickOnTopicSkipButton("Action Step");
+        getLoginPage().clickOnAddSkillsPopupCloseButton("Action Step");
         getHomePageActions().clickOnPosterTextArea("Action Step");
         getHomePageActions().enterTextOnMessageTextArea("Action Step", textPostVal);
         getHomePageActions().clickOnPostButton("Action Step");

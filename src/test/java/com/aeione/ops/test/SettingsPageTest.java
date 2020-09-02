@@ -1,6 +1,5 @@
 package com.aeione.ops.test;
 
-import com.aeione.ops.generic.DriverManager;
 import com.aeione.ops.generic.GoogleDriveAPI;
 import com.aeione.ops.generic.GoogleSheetAPI;
 import com.aeione.ops.generic.TestSetUp;
@@ -48,13 +47,17 @@ public class SettingsPageTest extends TestSetUp
         return new ProfilePageActions();
     }
 
-    public GoogleDriveAPI dsriveAPI() throws IOException
+    public GoogleSheetAPI sheetAPI() throws IOException
     {
-        return new GoogleDriveAPI();
+       GoogleSheetAPI.getSheetsService();
+        return new GoogleSheetAPI();
     }
 
-    public GoogleSheetAPI sheetAPI() throws IOException {
-        return new GoogleSheetAPI();
+    public GoogleDriveAPI dsriveAPI() throws IOException {
+
+      GoogleDriveAPI.getDriveService();
+        return new GoogleDriveAPI();
+
     }
 
     @Test(priority = 114, enabled = true, alwaysRun = true, description = "Verify Settings option")
@@ -319,8 +322,8 @@ public class SettingsPageTest extends TestSetUp
         password = val.get(1);
         fullName = val.get(2);
 
-        getLoginPage().logIn("Action Step",fullName,  "valid username, password",username, password);
-        getLoginPage().clickOnTopicSkipButton("Action Step");
+        getLoginPage().logIn("Action Step", fullName, "valid username, password", username, password);
+        getLoginPage().clickOnAddSkillsPopupCloseButton("Action Step");
 
         val = sheetAPI().getSpreadSheetValuesOfSpecificRow(TEST_DATA_GOOGLESHEET, TopBarDropDownRange);
         action = val.get(1);

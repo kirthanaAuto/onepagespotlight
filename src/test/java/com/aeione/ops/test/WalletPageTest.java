@@ -1,8 +1,12 @@
 package com.aeione.ops.test;
 
+import com.aeione.ops.generic.GoogleDriveAPI;
 import com.aeione.ops.generic.GoogleSheetAPI;
 import com.aeione.ops.generic.TestSetUp;
-import com.aeione.ops.pageactions.*;
+import com.aeione.ops.pageactions.HomePageActions;
+import com.aeione.ops.pageactions.LoginPageActions;
+import com.aeione.ops.pageactions.RegistrationPageActions;
+import com.aeione.ops.pageactions.WalletPageActions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
@@ -30,10 +34,18 @@ public class WalletPageTest extends TestSetUp
     public WalletPageActions getWalletPageActions() throws IOException {
         return new WalletPageActions();
     }
-    public GoogleSheetAPI sheetAPI() throws IOException
 
+    public GoogleSheetAPI sheetAPI() throws IOException
     {
+        GoogleSheetAPI.getSheetsService();
         return new GoogleSheetAPI();
+    }
+
+    public GoogleDriveAPI dsriveAPI() throws IOException {
+
+        GoogleDriveAPI.getDriveService();
+        return new GoogleDriveAPI();
+
     }
 
     public HomePageActions getHomePageActions() throws IOException {
@@ -112,7 +124,7 @@ public class WalletPageTest extends TestSetUp
         Map<String, String> walletValues = sheetAPI().getSpreadSheetRowValueByColumnName(TEST_DATA_GOOGLESHEET, walletRange);
 
         getLoginPage().logIn("Action Step", fullname, "valid username, password", username, password);
-        getLoginPage().clickOnTopicSkipButton("Action Step");
+        getLoginPage().clickOnAddSkillsPopupCloseButton("Action Step");
         getWalletPageActions().clickOnWalletTopBar("Action Step");
         getWalletPageActions().verifyCoinsAddedInWalletOnRegistration("Verify Step", walletValues.get("Registration Reward Points").trim());
     }
